@@ -1,0 +1,47 @@
+# https://github.com/ruby/actions-coverity-scan/blob/master/.github/workflows/coverity-scan.yml
+
+name: coverity-scan
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 18 * * *' # Daily at 18:00 UTC
+
+jobs:
+  latest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Download Coverity Build Tool
+        run: |
+          wget -q https://scan.coverity.com/download/linux64 --post-data "token=$TOKEN&project=Ciremun%2Fpassword-manager" -O coverity_tool.tgz
+          mkdir cov-analysis-linux64
+          tar xzf coverity_tool.tgz --strip 1 -C cov-analysis-linux64
+        env:
+          TOKEN: ${{ secrets.COVERITY_SCAN_TOKEN }}
+
+      - name: Fixed world writable dirs
+        run: |
+          chmod go-w $HOME
+          sudo chmod -R go-w /usr/share
+
+      - name: Build with cov-build
+        run: |
+          ls -la
+          export PATH=`pwd`/cov-analysis-linux64/bin:$PATH
+          chmod +x *.sh
+          cov-build --dir cov-int ./build_console.sh
+
+      - name: Submit the result to Coverity Scan
+        id: vars
+        run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+      - run: |
+          tar czvf pm.tgz cov-int
+          curl --form token=$TOKEN \
+            --form email=ciremun@yandex.ru \
+            --form file=@pm.tgz \
+            --form version="${{ steps.vars.outputs.sha_short }}" \
+            --form description="${{ steps.vars.outputs.sha_short }}" \
+            https://scan.coverity.com/builds?project=Ciremun%2Fpassword-manager
+        env:
+          TOKEN: ${{ secrets.COVERITY_SCAN_TOKEN }}

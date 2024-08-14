@@ -1,0 +1,72 @@
+name: build-ui-desktop
+on:
+  push:
+    paths:
+    - 'source/ui/**'
+    - 'include/ui/**'
+  workflow_dispatch:
+    paths:
+      - 'source/ui/**'
+      - 'include/ui/**'
+
+jobs:
+  ubuntu-gcc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: build
+        run: |
+            sudo apt install -y libsdl2-dev
+            cd source/ui
+            make
+            cd ../../
+      - name: password-manager
+        uses: actions/upload-artifact@v2
+        with:
+          name: pm-ui-linux-gcc
+          path: |
+            source/ui/pm-ui
+        env:
+          CC: gcc
+  windows-msvc:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: seanmiddleditch/gha-setup-vsdevenv@master
+      - name: build
+        shell: powershell
+        run: |
+          cd source/ui
+          wget https://www.libsdl.org/release/SDL2-devel-2.0.20-VC.zip -O SDL2-devel-2.0.20-VC.zip
+          tar xf SDL2-devel-2.0.20-VC.zip
+          cl /DNDEBUG /D_CRT_SECURE_NO_WARNINGS /DIMGUI_USE_STB_SPRINTF /DIMGUI_DEFINE_MATH_OPERATORS /DPM_THREAD_COUNT=1 /DSDL_MAIN_HANDLED /O2 /W4 /EHsc /FC /I../../include /Iimgui /Iimgui/backends /ISDL2-2.0.20/include imgui/*.cpp imgui/backends/imgui_impl_sdl.cpp imgui/backends/imgui_impl_opengl3.cpp *.cpp ../console/pm_aes.c ../console/pm_b64.c ../console/pm_io.c ../console/pm_parse.c ../console/pm_rand.c ../console/pm_sync.c ../console/pm_thread.c ../console/pm_glob.c ../console/pm_xcrypt.c /Fe:pm-ui-msvc /link /SUBSYSTEM:windows /ENTRY:mainCRTStartup opengl32.lib SDL2-2.0.20/lib/x64/SDL2.lib
+          cd ../../
+      - name: password-manager
+        uses: actions/upload-artifact@v2
+        with:
+          name: pm-ui-msvc
+          path: |
+            source/ui/pm-ui-msvc.exe
+  windows-msys2-mingw:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: msys2 {0}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: msys2/setup-msys2@v2
+        with:
+          msystem: MINGW64
+          install: mingw-w64-x86_64-gcc make mingw-w64-x86_64-SDL2 pkg-config
+          update: true
+      - name: build
+        run: |
+          cd source/ui
+          make -B
+          cd ../../
+      - name: password-manager
+        uses: actions/upload-artifact@v2
+        with:
+          name: pm-ui-msys2
+          path: |
+            source/ui/pm-ui.exe
