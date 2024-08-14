@@ -1,8 +1,8 @@
 #include "CuTest.h"
 #include <stdio.h>
 
-// Uključite zaglavlje testova koje ste napravili
 #include "test_b64.h"
+#include "test_rand.h"
 
 // Funkcija koja izvršava sve testove i ispisuje rezultate
 void RunAllTests(void)
@@ -12,6 +12,7 @@ void RunAllTests(void)
 
     // Dodavanje testove u suit
     CuSuiteAddSuite(suite, TestSuite_b64());
+    CuSuiteAddSuite(suite, TestSuite_rand());
 
     // Pokretanje testova
     CuSuiteRun(suite);
