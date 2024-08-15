@@ -1,0 +1,40 @@
+desc: --massif-out-file=massif_outputs/massif_base64_decode.out
+cmd: ../../../password-manager-master/pm -b64dec "encoded_string" -kf ../../password-manager-master/key.txt
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=208190
+mem_heap_B=13
+mem_heap_extra_B=11
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=209420
+mem_heap_B=13
+mem_heap_extra_B=11
+mem_stacks_B=0
+heap_tree=peak
+n1: 13 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 13 0x10BB22: b64_decode (pm_b64.c:21)
+  n1: 13 0x10FD6F: b64_decrypt (pm_xcrypt.c:30)
+   n1: 13 0x10DBA9: run (pm_parse.c:257)
+    n0: 13 0x489F082: (below main) (libc-start.c:308)
+#-----------
+snapshot=3
+#-----------
+time=209420
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty

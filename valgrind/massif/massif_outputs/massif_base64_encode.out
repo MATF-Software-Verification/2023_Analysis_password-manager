@@ -1,0 +1,65 @@
+desc: --massif-out-file=massif_outputs/massif_base64_encode.out
+cmd: ../../../password-manager-master/pm -b64enc "string" -kf ../../password-manager-master/key.txt
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=214413
+mem_heap_B=13
+mem_heap_extra_B=11
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=214866
+mem_heap_B=1037
+mem_heap_extra_B=19
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=215716
+mem_heap_B=1037
+mem_heap_extra_B=19
+mem_stacks_B=0
+heap_tree=peak
+n2: 1037 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x48FCD03: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x490CECF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x490BF2F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x490A6B4: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x490A6B4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x48FE3C0: fwrite (iofwrite.c:39)
+       n1: 1024 0x10FCDA: b64_encrypt (pm_xcrypt.c:23)
+        n1: 1024 0x10DA90: run (pm_parse.c:340)
+         n0: 1024 0x489F082: (below main) (libc-start.c:308)
+ n1: 13 0x10BE65: b64_encode (pm_b64.c:110)
+  n1: 13 0x10FCBF: b64_encrypt (pm_xcrypt.c:22)
+   n1: 13 0x10DA90: run (pm_parse.c:340)
+    n0: 13 0x489F082: (below main) (libc-start.c:308)
+#-----------
+snapshot=4
+#-----------
+time=215716
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=219585
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
