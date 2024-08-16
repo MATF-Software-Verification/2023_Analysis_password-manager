@@ -2,3 +2,5 @@ gate
 .pm_data
 *.env
 *.swp
+*.gcda
+*.gcno
