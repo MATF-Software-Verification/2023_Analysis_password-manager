@@ -1,0 +1,62 @@
+--------------------------------------------------------------------------------
+Command:            ../../../password-manager-master/pm -b64enc "string" -kf ../../password-manager-master/key.txt
+Massif arguments:   --massif-out-file=massif_outputs/massif_base64_encode.out
+ms_print arguments: massif_base64_encode.out
+--------------------------------------------------------------------------------
+
+
+    KB
+1.031^                                                                      # 
+     |                                                                      # 
+     |                                                                      # 
+     |                                                                      # 
+     |                                                                      # 
+     |                                                                      # 
+     |                                                                      # 
+     |                                                                      # 
+     |                                                                      # 
+     |                                                                      # 
+     |                                                                      # 
+     |                                                                      # 
+     |                                                                      # 
+     |                                                                      # 
+     |                                                                      # 
+     |                                                                      # 
+     |                                                                      # 
+     |                                                                      # 
+     |                                                                      # 
+     |                                                                      # 
+   0 +----------------------------------------------------------------------->ki
+     0                                                                   214.4
+
+Number of snapshots: 6
+ Detailed snapshots: [3 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        214,413               24               13            11            0
+  2        214,866            1,056            1,037            19            0
+  3        215,716            1,056            1,037            19            0
+98.20% (1,037B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->96.97% (1,024B) 0x48FCD03: _IO_file_doallocate (filedoalloc.c:101)
+| ->96.97% (1,024B) 0x490CECF: _IO_doallocbuf (genops.c:347)
+|   ->96.97% (1,024B) 0x490BF2F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->96.97% (1,024B) 0x490A6B4: _IO_new_file_xsputn (fileops.c:1244)
+|       ->96.97% (1,024B) 0x490A6B4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->96.97% (1,024B) 0x48FE3C0: fwrite (iofwrite.c:39)
+|           ->96.97% (1,024B) 0x10FCDA: b64_encrypt (pm_xcrypt.c:23)
+|             ->96.97% (1,024B) 0x10DA90: run (pm_parse.c:340)
+|               ->96.97% (1,024B) 0x489F082: (below main) (libc-start.c:308)
+|                 
+->01.23% (13B) 0x10BE65: b64_encode (pm_b64.c:110)
+  ->01.23% (13B) 0x10FCBF: b64_encrypt (pm_xcrypt.c:22)
+    ->01.23% (13B) 0x10DA90: run (pm_parse.c:340)
+      ->01.23% (13B) 0x489F082: (below main) (libc-start.c:308)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  4        215,716            1,032            1,024             8            0
+  5        219,585                0                0             0            0

@@ -1,0 +1,50 @@
+--------------------------------------------------------------------------------
+Command:            ../../../password-manager-master/pm -b64dec "encoded_string" -kf ../../password-manager-master/key.txt
+Massif arguments:   --massif-out-file=massif_outputs/massif_base64_decode.out
+ms_print arguments: massif_base64_decode.out
+--------------------------------------------------------------------------------
+
+
+     B
+   24^                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+   0 +----------------------------------------------------------------------->ki
+     0                                                                   204.5
+
+Number of snapshots: 4
+ Detailed snapshots: [2 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        208,190               24               13            11            0
+  2        209,420               24               13            11            0
+54.17% (13B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->54.17% (13B) 0x10BB22: b64_decode (pm_b64.c:21)
+  ->54.17% (13B) 0x10FD6F: b64_decrypt (pm_xcrypt.c:30)
+    ->54.17% (13B) 0x10DBA9: run (pm_parse.c:257)
+      ->54.17% (13B) 0x489F082: (below main) (libc-start.c:308)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  3        209,420                0                0             0            0
