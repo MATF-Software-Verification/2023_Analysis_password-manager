@@ -1,0 +1,1016 @@
+--------------------------------------------------------------------------------
+Profile data file 'callgrind_output/callgrind_base64_encode_string.out' (creator: callgrind-3.15.0)
+--------------------------------------------------------------------------------
+I1 cache: 32768 B, 64 B, 8-way associative
+D1 cache: 32768 B, 64 B, 8-way associative
+LL cache: 3145728 B, 64 B, 12-way associative
+Timerange: Basic block 0 - 60812
+Trigger: Program termination
+Profiled target:  ../../../password-manager-master/pm -b64enc "string" -kf ../../password-manager-master/key.txt (PID 10239, part 1)
+Events recorded:  Ir Dr Dw I1mr D1mr D1mw ILmr DLmr DLmw Bc Bcm Bi Bim
+Events shown:     Ir Dr Dw I1mr D1mr D1mw ILmr DLmr DLmw Bc Bcm Bi Bim
+Event sort order: Ir Dr Dw I1mr D1mr D1mw ILmr DLmr DLmw Bc Bcm Bi Bim
+Thresholds:       99 0 0 0 0 0 0 0 0 0 0 0 0
+Include dirs:     
+User annotated:   
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+Ir      Dr     Dw     I1mr  D1mr  D1mw ILmr  DLmr  DLmw Bc     Bcm   Bi  Bim 
+--------------------------------------------------------------------------------
+279,219 65,210 20,126 1,278 3,143  798 1,253 2,346  714 52,954 5,902 521 234  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir     Dr     Dw    I1mr D1mr  D1mw ILmr DLmr DLmw Bc     Bcm   Bi  Bim  file:function
+--------------------------------------------------------------------------------
+71,545 14,316    15   10 1,087    1   10  842    0 15,770 2,025   2   2  /build/glibc-LcI20x/glibc-2.31/elf/dl-addr.c:_dl_addr [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+42,108 14,110 6,247   15   295   14   15  193    5  6,134   377   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-lookup.c:do_lookup_x [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+30,237  5,996 3,301   10   113   14   10  100    1  3,618   219   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-lookup.c:_dl_lookup_symbol_x [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+25,637  4,989    80    5    34    2    5   34    2  7,965   921   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-tunables.c:__GI___tunables_init [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+22,638  5,389 2,656   28   460  283   28  432  271  4,945    78 210  55  /build/glibc-LcI20x/glibc-2.31/elf/../sysdeps/x86_64/dl-machine.h:_dl_relocate_object
+11,571  2,386     0   46   102    0   46   71    0  1,338   220  87  58  /build/glibc-LcI20x/glibc-2.31/string/../sysdeps/x86_64/strcmp.S:strcmp [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+11,404  2,825   362   10   314    3   10  289    0  2,041   110   .   .  /build/glibc-LcI20x/glibc-2.31/elf/do-rel.h:_dl_relocate_object
+ 8,223  1,522     0    1     9    0    1    9    0  2,246    85   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-tunables.h:__GI___tunables_init
+ 8,063  2,684   928    6   141    5    6   97    1  1,061    43   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-lookup.c:check_match [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+ 5,061    903   755   26     0    0   26    0    0     16    11   .   .  /home/emilija/Desktop/password-manager-master/source/console/pm_aes.c:Cipher [/home/emilija/Desktop/password-manager-master/pm]
+ 4,094  1,384   405   18    42   29   18   37   28    752   117   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-version.c:_dl_check_map_versions [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+ 1,949    443   209   35     7   16   34    7   16    308    86  26  14  /build/glibc-LcI20x/glibc-2.31/elf/dl-load.c:_dl_map_object_from_fd [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+ 1,399    259   150   28     3    6   28    2    6    340    59   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-deps.c:_dl_map_object_deps [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+ 1,398    213     0    4    18    0    4   18    0    389    36   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-cache.c:_dl_cache_libcmp [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+ 1,132    281   164    2     0    1    2    0    1    164    43   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-misc.c:_dl_name_match_p [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+ 1,031    260   127   68    32   17   68   19   14    214    81  11   7  /build/glibc-LcI20x/glibc-2.31/elf/rtld.c:dl_main [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+ 1,027    275   211    4     5    0    4    5    0    150    23   .   .  /home/emilija/Desktop/password-manager-master/source/console/pm_aes.c:KeyExpansion [/home/emilija/Desktop/password-manager-master/pm]
+   964    132   102    9    23   20    9   23   20    243    32   .   .  /build/glibc-LcI20x/glibc-2.31/elf/get-dynamic-info.h:_dl_map_object_from_fd
+   950    383    16   23     4    0   23    4    0    329   112   .   .  /home/emilija/Desktop/password-manager-master/source/console/pm_parse.c:parse_flags [/home/emilija/Desktop/password-manager-master/pm]
+   908    194   137   22     1    6   22    1    6    161    40   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-load.c:_dl_map_object [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   902    216   107   18    13    2   18   13    2    128    37   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-load.c:open_verify.constprop.0 [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   870     16   390    8     0   91    4    0   91    131    42   .   .  /build/glibc-LcI20x/glibc-2.31/string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:memset [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   813    148   157   15     4   29   15    4   29    128    52   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-object.c:_dl_new_object [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   768      0   130    1     0   35    1    0   34    127    10   .   .  /build/glibc-LcI20x/glibc-2.31/malloc/malloc.c:ptmalloc_init.part.0
+   762    213   108   17     0    5   17    0    5    103    27   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-load.c:open_path [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   758    111    24   10     6    0   10    6    0    271    44   .   .  /build/glibc-LcI20x/glibc-2.31/string/../sysdeps/x86/cacheinfo.c:intel_check_word.isra.0 [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+   720    140   140    5     0    1    5    0    1     85     5   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-minimal.c:malloc [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   634    200   123   12    29    0   12    0    0     92    31   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-reloc.c:_dl_relocate_object [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   606    162    56   20     4    1   10    0    0    114    55   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-sort-maps.c:_dl_sort_maps [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   598     80    82   26     0    8   26    0    8     84    45   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-hwcaps.c:_dl_important_hwcaps [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   550    151    43   17    24    6   16   21    6    129    29  18  14  /build/glibc-LcI20x/glibc-2.31/elf/../elf/dl-sysdep.c:_dl_sysdep_start [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   546     87     0    6     2    0    6    2    0     48    14   .   .  /build/glibc-LcI20x/glibc-2.31/string/../sysdeps/x86_64/multiarch/../strlen.S:strlen [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   542    117    59   16    15    0   16   15    0     98    27   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-cache.c:_dl_load_cache_lookup [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   525    108    27    6    25    0    3    0    0     78    38   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-tunables.c:__tunable_get_val [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   510      0     0    1     0    0    1    0    0     81    11   .   .  /build/glibc-LcI20x/glibc-2.31/string/../bits/stdlib-bsearch.h:intel_check_word.isra.0
+   499    174     2    2     0    0    2    0    0    168    35   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-environ.c:_dl_next_ld_env_entry [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   485    124    75    6     0    1    6    0    1    108     4   .   .  /build/glibc-LcI20x/glibc-2.31/libio/fileops.c:_IO_file_overflow@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+   479    161     7    4    43    0    4    1    0    152     9   .   .  /build/glibc-LcI20x/glibc-2.31/stdlib/getenv.c:getenv [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+   474    174    30    5    37    0    5    4    0     60     1   .   .  /build/glibc-LcI20x/glibc-2.31/elf/../elf/dl-runtime.c:_dl_fixup [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   443     96    57   11     0    4   11    0    4     72    21   .   .  /build/glibc-LcI20x/glibc-2.31/elf/../sysdeps/x86/dl-prop.h:_dl_process_pt_note [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   441    147     .    .     .    .    .    .    .      .     .   .   .  /build/glibc-LcI20x/glibc-2.31/elf/../sysdeps/generic/ldsodefs.h:_dl_relocate_object
+   439    130    51    3    21   27    3   21   27    114     5   .   .  /build/glibc-LcI20x/glibc-2.31/elf/../sysdeps/x86_64/dl-machine.h:_dl_start
+   434     94    64    0     2    6    0    1    6     79    35   .   .  /build/glibc-LcI20x/glibc-2.31/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:mempcpy [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   417    139     .    .     .    .    .    .    .      .     .   .   .  /build/glibc-LcI20x/glibc-2.31/elf/../sysdeps/generic/ldsodefs.h:do_lookup_x
+   413    123    35    6     0    0    6    0    0     59    19   .   .  /build/glibc-LcI20x/glibc-2.31/elf/./dl-map-segments.h:_dl_map_object_from_fd
+   412     69    70   21     1    2   21    0    1     57    25   .   .  /build/glibc-LcI20x/glibc-2.31/malloc/malloc.c:_int_malloc [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+   354     48     0    7     6    0    7    6    0     24     5   .   .  /build/glibc-LcI20x/glibc-2.31/string/../sysdeps/x86_64/multiarch/../strchr.S:index [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   338     54    36    4     0    0    4    0    0     61    13   .   .  /build/glibc-LcI20x/glibc-2.31/misc/../sysdeps/unix/sysv/linux/mmap64.c:mmap [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   335     90    47   14    21    6   14    0    0     67    19   8   8  /build/glibc-LcI20x/glibc-2.31/elf/dl-fini.c:_dl_fini [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   329      7   297    4     0   38    4    0   38    290    10   .   .  /build/glibc-LcI20x/glibc-2.31/elf/../elf/dl-tls.c:_dl_allocate_tls_storage [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   328     50    38    7     8    6    7    8    6     87    24   .   .  /build/glibc-LcI20x/glibc-2.31/elf/get-dynamic-info.h:dl_main
+   327     50    56   15     2    4   15    2    4     52    21   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-load.c:_dl_init_paths [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   317     89    67    4     1   11    4    1   11     59    24   .   .  /build/glibc-LcI20x/glibc-2.31/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:memcpy [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   310     86    46    2     4    6    2    0    6     42    10   .   .  /build/glibc-LcI20x/glibc-2.31/nptl/libc_pthread_init.c:__libc_pthread_init [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+   309     63     0    1     8    0    1    8    0     54     8   .   .  /build/glibc-LcI20x/glibc-2.31/elf/do-rel.h:_dl_start
+   274     13    22    3     0    1    3    0    1     39     7   .   .  /build/glibc-LcI20x/glibc-2.31/io/../sysdeps/unix/sysv/linux/open64_nocancel.c:__open_nocancel [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   273    134    34    3     2    4    3    2    4    100    14   .   .  /build/glibc-LcI20x/glibc-2.31/string/../sysdeps/x86_64/strcspn.S:strcspn [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   255     35    28   10     2    1   10    1    0     26     7   .   .  /home/emilija/Desktop/password-manager-master/source/console/pm_b64.c:b64_encode [/home/emilija/Desktop/password-manager-master/pm]
+   253     61    13   12    12    0   12   12    0     47    19   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-load.c:open_verify.constprop.1 [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   248     77     1    2     1    0    2    1    0     75    15   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-minimal.c:strsep [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   246    282   306    4     1   14    4    0    1      0     0   6   6  /build/glibc-LcI20x/glibc-2.31/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_xsave [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   243     20    21   15     1    2   15    0    2     45    10   .   .  /build/glibc-LcI20x/glibc-2.31/string/../sysdeps/x86/cacheinfo.c:init_cacheinfo [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+   238     36    26   10     7    7   10    7    7     62    18   .   .  /build/glibc-LcI20x/glibc-2.31/elf/get-dynamic-info.h:_dl_start
+   226     79    38    4    18    0    4    0    0     25     6   8   8  /build/glibc-LcI20x/glibc-2.31/elf/dl-init.c:call_init.part.0 [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   210     42    78    3     0    4    3    0    4     12     1   6   2  /build/glibc-LcI20x/glibc-2.31/elf/dl-error-skeleton.c:_dl_catch_exception [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   209     69    18    4     0    0    4    0    0     39     3  12   1  /build/glibc-LcI20x/glibc-2.31/libio/genops.c:_IO_default_xsputn [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+   177     36    45    5     0    0    5    0    0     15     3   .   .  /build/glibc-LcI20x/glibc-2.31/string/../sysdeps/x86/cacheinfo.c:handle_intel.constprop.0 [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+   166     35    62    6     1    1    6    0    1      1     1   .   .  /build/glibc-LcI20x/glibc-2.31/setjmp/../sysdeps/x86_64/setjmp.S:__sigsetjmp [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   162     45    24    4     1    0    4    1    0     27     2   .   .  /build/glibc-LcI20x/glibc-2.31/stdlib/cxa_finalize.c:__cxa_finalize [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+   157     23    51   12     5    7   12    0    3     24    12   .   .  /build/glibc-LcI20x/glibc-2.31/nptl/nptl-init.c:__pthread_initialize_minimal [/usr/lib/x86_64-linux-gnu/libpthread-2.31.so]
+   156     33    36   13     0    1   13    0    1     25    15   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-load.c:fillin_rpath [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   155     37    35    3     0    1    3    0    1     13     7   8   2  /build/glibc-LcI20x/glibc-2.31/elf/dl-object.c:_dl_add_to_namespace_list [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   148     47    28   13     0    0   13    0    0     27     9   3   3  /build/glibc-LcI20x/glibc-2.31/libio/genops.c:_IO_cleanup [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+   146     17    37   15     1    1   15    1    1     20     4   1   1  /build/glibc-LcI20x/glibc-2.31/elf/../sysdeps/x86/cpu-features.c:_dl_sysdep_start
+   144     33    24   14     4    2   14    1    2     21     8   2   2  /build/glibc-LcI20x/glibc-2.31/malloc/malloc.c:sysmalloc [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+   131     27    49   12     2    1   12    0    1     45    13   .   .  /home/emilija/Desktop/password-manager-master/source/console/pm_parse.c:run [/home/emilija/Desktop/password-manager-master/pm]
+   124     38    22   10     8    1   10    3    1     23     7   3   3  /build/glibc-LcI20x/glibc-2.31/libio/genops.c:_IO_flush_all_lockp [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+   120     35    30    3     6    1    3    6    1     10     1   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-lookup.c:_dl_setup_hash [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   112      7    85    3     0    9    3    0    9     85    10   .   .  /build/glibc-LcI20x/glibc-2.31/malloc/malloc.c:tcache_init.part.0 [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+   111     17    16    3     0    0    3    0    0     20     7   .   .  /home/emilija/Desktop/password-manager-master/source/console/pm_aes.c:AES_CTR_xcrypt_buffer [/home/emilija/Desktop/password-manager-master/pm]
+   109      8     7    1     0    0    1    0    0     16     3   .   .  /build/glibc-LcI20x/glibc-2.31/io/../sysdeps/unix/sysv/linux/wordsize-64/xstat.c:_xstat [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   102     28    24    7     0    3    7    0    1      8     2   .   .  /build/glibc-LcI20x/glibc-2.31/nptl/../sysdeps/unix/sysv/linux/sigaction.c:__libc_sigaction [/usr/lib/x86_64-linux-gnu/libpthread-2.31.so]
+    99     12    23   10     0    1   10    0    1     16     5   .   .  /build/glibc-LcI20x/glibc-2.31/elf/../sysdeps/x86/cpu-features.c:get_common_indices.constprop.0 [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+    96     19    18    9     4    1    9    0    0     18     4   2   2  /build/glibc-LcI20x/glibc-2.31/stdlib/exit.c:__run_exit_handlers [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+    90     40    15    1     0    1    1    0    1      .     .   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-deps.c:openaux [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+    90     30    30    2     0    1    2    0    1      5     .   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-load.c:_dl_dst_count [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+    90      0     0    1     0    0    1    0    0     10     9   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-minimal.c:calloc [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+    89     27    12    4     3    0    4    0    0     14     7   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-init.c:_dl_init [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+    85     27    13    6     5    0    6    0    0     12     2   .   .  /build/glibc-LcI20x/glibc-2.31/elf/../elf/dl-tls.c:_dl_allocate_tls_init [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+    85     15     9    2     0    0    2    0    0     11    10   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-version.c:_dl_check_all_versions [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+    83     11    18    8     4    2    8    1    0      5     2   .   .  /build/glibc-LcI20x/glibc-2.31/malloc/arena.c:ptmalloc_init.part.0 [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+    82     12     4    5     1    1    5    1    1     15     7   .   .  /build/glibc-LcI20x/glibc-2.31/elf/../sysdeps/unix/sysv/linux/dl-sysdep.c:_dl_discover_osversion [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+    80     20     9    6     2    0    6    2    0     17     3   .   .  /build/glibc-LcI20x/glibc-2.31/elf/../sysdeps/x86/dl-prop.h:dl_main
+    77     17    13    5     3    0    5    1    0     16     9   .   .  /build/glibc-LcI20x/glibc-2.31/elf/rtld.c:init_tls [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+    76     24     4    3     0    0    3    0    0     26     8   .   .  /build/glibc-LcI20x/glibc-2.31/elf/./dl-load.h:_dl_map_object_from_fd
+    74     17    18    6     1    5    5    0    5      5     1   .   .  /build/glibc-LcI20x/glibc-2.31/elf/rtld.c:_dl_start [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+    72      8    16    1     0    0    1    0    0      4     1   .   .  /build/glibc-LcI20x/glibc-2.31/string/strdup.c:strdup [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+    70     16    10    5     0    0    5    0    0     14     5   .   .  /build/glibc-LcI20x/glibc-2.31/nptl/../nptl/pthread_mutex_lock.c:pthread_mutex_lock [/usr/lib/x86_64-linux-gnu/libpthread-2.31.so]
+    70     14     8    6     0    0    6    0    0      7     3   .   .  /build/glibc-LcI20x/glibc-2.31/elf/../elf/dl-tls.c:_dl_determine_tlsoffset [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+    69     18     6    3     1    0    3    0    0     15     4   .   .  /build/glibc-LcI20x/glibc-2.31/nptl/register-atfork.c:__unregister_atfork [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+    68     15    15    5     0    2    5    0    2      6     1   .   .  /build/glibc-LcI20x/glibc-2.31/elf/rtld.c:handle_preload_list [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+    66      6     0    4     0    0    4    0    0     12     2   .   .  /build/glibc-LcI20x/glibc-2.31/io/../sysdeps/unix/sysv/linux/wordsize-64/fxstat.c:_fxstat [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+    65     17    13    4     0    0    4    0    0      8     4   1   1  /build/glibc-LcI20x/glibc-2.31/libio/fileops.c:_IO_do_write@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+    62     14     8    4     2    0    4    0    0     16     6   .   .  /build/glibc-LcI20x/glibc-2.31/nptl/pthread_mutex_unlock.c:pthread_mutex_unlock [/usr/lib/x86_64-linux-gnu/libpthread-2.31.so]
+    61     18    11    7     0    0    7    0    0      9     2   .   .  /build/glibc-LcI20x/glibc-2.31/malloc/malloc.c:_int_free [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+    59     16    18    5     1    0    5    0    0      7     2   2   2  /build/glibc-LcI20x/glibc-2.31/csu/../csu/libc-start.c:(below main) [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+    59     14     8    6     2    0    6    1    0      7     2   1   1  /build/glibc-LcI20x/glibc-2.31/libio/fileops.c:_IO_file_xsputn@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+    58     10    14    4     0    0    4    0    0      9     1   .   .  /home/emilija/Desktop/password-manager-master/source/console/pm_io.c:open_and_map_file [/home/emilija/Desktop/password-manager-master/pm]
+    56     25     6    2     2    0    2    2    0     15     7   .   .  /build/glibc-LcI20x/glibc-2.31/elf/../sysdeps/posix/dl-fileid.h:_dl_map_object_from_fd
+    56      8     0    1     0    0    1    0    0      8     .   .   .  /build/glibc-LcI20x/glibc-2.31/io/../sysdeps/unix/sysv/linux/pread64_nocancel.c:__pread64_nocancel [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+    54     27     0    1     0    0    1    0    0      0     0  27   1  ???:0x00000000040010a0 [???]
+    54     16     4    4     2    0    4    1    0     15    14   .   .  /build/glibc-LcI20x/glibc-2.31/elf/dl-debug.c:_dl_debug_initialize [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+    54     15     9    3     0    0    3    0    0      6     4   .   .  /build/glibc-LcI20x/glibc-2.31/malloc/scratch_buffer_set_array_size.c:__libc_scratch_buffer_set_array_size [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /home/emilija/Desktop/password-manager-master/source/console/pm_parse.c
+--------------------------------------------------------------------------------
+Ir  Dr  Dw I1mr D1mr D1mw ILmr DLmr DLmw Bc  Bcm Bi Bim 
+
+-- line 11 ----------------------------------------
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  .   .  .    .    .    .    .    .    .   .   .  .   .  #include <string.h>
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  .   .  .    .    .    .    .    .    .   .   .  .   .  String sync_remote_url;
+  .   .  .    .    .    .    .    .    .   .   .  .   .  extern const char *data_store;
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  .   .  .    .    .    .    .    .    .   .   .  .   .  int is_flag(char *arg, char *s, char *l)
+  .   .  .    .    .    .    .    .    .   .   .  .   .  {
+648 262  0   13    4    0   13    4    0 264 105  .   .      return (strcmp(s, arg) == 0) || (strcmp(l, arg) == 0);
+  .   .  .    .    .    .    .    .    .   .   .  .   .  }
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  .   .  .    .    .    .    .    .    .   .   .  .   .  void parse_flags(Flags *f, int argc, char **argv)
+ 13   1  6    2    0    0    2    .    .   .   .  .   .  {
+  1   .  .    .    .    .    .    .    .   .   .  .   .      Flag *prev = NULL;
+ 21   0  0    1    0    0    1    0    0   3   1  .   .      for (int i = 1; i < argc; i++)
+  .   .  .    .    .    .    .    .    .   .   .  .   .      {
+  .   .  .    .    .    .    .    .    .   .   .  .   .          Flag *flag = NULL;
+ 12   4  0    0    0    0    0    0    0   4   4  .   .          if (!f->data.exists && is_flag(argv[i], "-d", "--data"))
+  .   .  .    .    .    .    .    .    .   .   .  .   .              flag = &f->data;
+ 16   8  0    0    0    0    0    0    0   4   .  .   .          else if (!f->label.exists && is_flag(argv[i], "-l", "--label"))
+  .   .  .    .    .    .    .    .    .   .   .  .   .              flag = &f->label;
+ 16   8  0    1    0    0    1    0    0   4   .  .   .          else if (!f->help.exists && is_flag(argv[i], "-h", "--help"))
+  .   .  .    .    .    .    .    .    .   .   .  .   .              flag = &f->help;
+ 16   8  0    0    0    0    0    0    0   4   .  .   .          else if (!f->data_file.exists && is_flag(argv[i], "-df", "--data-file"))
+  .   .  .    .    .    .    .    .    .   .   .  .   .              flag = &f->data_file;
+ 16   8  0    0    0    0    0    0    0   4   .  .   .          else if (!f->generate_password.exists && is_flag(argv[i], "-gp", "--generate-password"))
+  .   .  .    .    .    .    .    .    .   .   .  .   .              flag = &f->generate_password;
+ 16   8  0    0    0    0    0    0    0   4   .  .   .          else if (!f->key.exists && is_flag(argv[i], "-k", "--key"))
+  .   .  .    .    .    .    .    .    .   .   .  .   .              flag = &f->key;
+ 16   8  0    0    0    0    0    0    0   4   .  .   .          else if (!f->copy.exists && is_flag(argv[i], "-c", "--copy"))
+  .   .  .    .    .    .    .    .    .   .   .  .   .              flag = &f->copy;
+ 16   8  0    0    0    0    0    0    0   4   .  .   .          else if (!f->delete_label.exists && is_flag(argv[i], "-dl", "--delete-label"))
+  .   .  .    .    .    .    .    .    .   .   .  .   .              flag = &f->delete_label;
+ 16   8  0    0    0    0    0    0    0   4   .  .   .          else if (!f->input.exists && is_flag(argv[i], "-i", "--input"))
+  .   .  .    .    .    .    .    .    .   .   .  .   .              flag = &f->input;
+ 15   7  0    0    0    0    0    0    0   4   1  .   .          else if (!f->key_file.exists && is_flag(argv[i], "-kf", "--key-file"))
+  2   .  .    .    .    .    .    .    .   .   .  .   .              flag = &f->key_file;
+ 12   6  0    1    0    0    1    0    0   3   .  .   .          else if (!f->version.exists && is_flag(argv[i], "-v", "--version"))
+  .   .  .    .    .    .    .    .    .   .   .  .   .              flag = &f->version;
+ 12   6  0    1    0    0    1    0    0   3   .  .   .          else if (!f->output.exists && is_flag(argv[i], "-o", "--output"))
+  .   .  .    .    .    .    .    .    .   .   .  .   .              flag = &f->output;
+ 12   6  0    1    0    0    1    0    0   3   .  .   .          else if (!f->binary.exists && is_flag(argv[i], "-b", "--binary"))
+  .   .  .    .    .    .    .    .    .   .   .  .   .              flag = &f->binary;
+ 10   4  0    2    0    0    2    0    0   3   1  .   .          else if (!f->b64enc.exists && is_flag(argv[i], "-b64enc", "--base64-encode"))
+  2   .  .    .    .    .    .    .    .   .   .  .   .              flag = &f->b64enc;
+  8   4  0    0    0    0    0    0    0   2   .  .   .          else if (!f->b64dec.exists && is_flag(argv[i], "-b64dec", "--base64-decode"))
+  .   .  .    .    .    .    .    .    .   .   .  .   .              flag = &f->b64dec;
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  .   .  .    .    .    .    .    .    .   .   .  .   .          if (flag)
+  .   .  .    .    .    .    .    .    .   .   .  .   .          {
+  .   .  .    .    .    .    .    .    .   .   .  .   .              prev = flag;
+  2   0  2    .    .    .    .    .    .   .   .  .   .              flag->exists = 1;
+  6   0  0    0    0    0    0    0    0   2   .  .   .              if ((i + 1) >= argc)
+  .   .  .    .    .    .    .    .    .   .   .  .   .                  continue;
+  6   4  2    .    .    .    .    .    .   .   .  .   .              flag->value = argv[i + 1];
+  .   .  .    .    .    .    .    .    .   .   .  .   .          }
+ 32   8  6    1    0    0    1    0    0   6   .  .   .          else if (!prev || (prev->value && (strcmp(prev->value, argv[i]) != 0)))
+ 53  14  0    5    1    0    5    0    0   5   2  2   1  => ???:0x000000000010a400 (2x)
+  .   .  .    .    .    .    .    .    .   .   .  .   .          {
+  .   .  .    .    .    .    .    .    .   .   .  .   .              error("unknown flag: \"%s\"", argv[i]);
+  .   .  .    .    .    .    .    .    .   .   .  .   .              exit(1);
+  .   .  .    .    .    .    .    .    .   .   .  .   .          }
+  .   .  .    .    .    .    .    .    .   .   .  .   .      }
+  8   7  .    .    .    .    .    .    .   .   .  .   .  }
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  .   .  .    .    .    .    .    .    .   .   .  .   .  int run(uint8_t *aes_key, int argc, char **argv)
+ 14   1  7    2    0    0    2    .    .   .   .  .   .  {
+  2   0  2    0    0    1    0    0    1   .   .  .   .      sync_remote_url = (String){
+  2   0  1    .    .    .    .    .    .   .   .  .   .          .data = (uint8_t *)getenv("PM_SYNC_REMOTE_URL"),
+499 165  7    8   45    0    8    1    0 154  10  2   2  => ???:0x000000000010a2f0 (1x)
+  .   .  .    .    .    .    .    .    .   .   .  .   .      };
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  2   0  0    1    0    0    1    0    0   1   1  .   .      if (sync_remote_url.data != 0)
+  .   .  .    .    .    .    .    .    .   .   .  .   .          sync_remote_url.length = strlen((char *)sync_remote_url.data);
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+ 34   0 30    0    0    0    0    0    0  30   7  .   .      Flags f = {0};
+  5   0  1    .    .    .    .    .    .   .   .  .   .      parse_flags(&f, argc, argv);
+1,003 397 16   28    5    0   28    4    0 334 114  2   1  => /home/emilija/Desktop/password-manager-master/source/console/pm_parse.c:parse_flags (1x)
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  3   1  0    1    0    0    1    0    0   1   .  .   .      if (f.help.exists)
+  .   .  .    .    .    .    .    .    .   .   .  .   .      {
+  .   .  .    .    .    .    .    .    .   .   .  .   .          fprintf(stdout, "%s\n", "\n"
+  .   .  .    .    .    .    .    .    .   .   .  .   .                                  "./pm [flags]                      read or write data\n"
+  .   .  .    .    .    .    .    .    .   .   .  .   .                                  "\n"
+  .   .  .    .    .    .    .    .    .   .   .  .   .                                  "sync:                             set PM_SYNC_REMOTE_URL env var\n"
+  .   .  .    .    .    .    .    .    .   .   .  .   .                                  "\n"
+  .   .  .    .    .    .    .    .    .   .   .  .   .                                  "flags:\n"
+  .   .  .    .    .    .    .    .    .   .   .  .   .                                  "\n"
+-- line 95 ----------------------------------------
+-- line 110 ----------------------------------------
+  .   .  .    .    .    .    .    .    .   .   .  .   .                                  "-b       --binary                 binary mode\n"
+  .   .  .    .    .    .    .    .    .   .   .  .   .                                  "-b64enc  --base64-encode [str]    base64 encode string to stdout, optional key\n"
+  .   .  .    .    .    .    .    .    .   .   .  .   .                                  "-b64dec  --base64-decode [str]    base64 decode string to stdout, optional key\n"
+  .   .  .    .    .    .    .    .    .   .   .  .   .                                  "-v       --version                display version\n"
+  .   .  .    .    .    .    .    .    .   .   .  .   .                                  "-h       --help                   display help\n\n");
+  .   .  .    .    .    .    .    .    .   .   .  .   .          return 0;
+  .   .  .    .    .    .    .    .    .   .   .  .   .      }
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  3   1  0    0    0    0    0    0    0   1   .  .   .      if (f.version.exists)
+  .   .  .    .    .    .    .    .    .   .   .  .   .      {
+  .   .  .    .    .    .    .    .    .   .   .  .   .          fprintf(stdout, "%s %s\n", "password-manager",
+  .   .  .    .    .    .    .    .    .   .   .  .   .  #ifdef PM_VERSION
+  .   .  .    .    .    .    .    .    .   .   .  .   .                  STR(PM_VERSION)
+  .   .  .    .    .    .    .    .    .   .   .  .   .  #else
+  .   .  .    .    .    .    .    .    .   .   .  .   .                  "unknown"
+  .   .  .    .    .    .    .    .    .   .   .  .   .  #endif // PM_VERSION
+  .   .  .    .    .    .    .    .    .   .   .  .   .                  "\nPM_THREAD_COUNT=" STR(PM_THREAD_COUNT)
+  .   .  .    .    .    .    .    .    .   .   .  .   .          );
+  .   .  .    .    .    .    .    .    .   .   .  .   .          return 0;
+  .   .  .    .    .    .    .    .    .   .   .  .   .      }
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  3   1  0    0    0    0    0    0    0   1   1  .   .      if (f.key.exists)
+  .   .  .    .    .    .    .    .    .   .   .  .   .      {
+  .   .  .    .    .    .    .    .    .   .   .  .   .          if (!f.key.value)
+  .   .  .    .    .    .    .    .    .   .   .  .   .          {
+  .   .  .    .    .    .    .    .    .   .   .  .   .              error("%s", "key flag called without key value");
+  .   .  .    .    .    .    .    .    .   .   .  .   .              return 1;
+  .   .  .    .    .    .    .    .    .   .   .  .   .          }
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  .   .  .    .    .    .    .    .    .   .   .  .   .          size_t key_len = strlen(f.key.value);
+  .   .  .    .    .    .    .    .    .   .   .  .   .          memcpy(aes_key, f.key.value, key_len < 32 ? key_len : 32);
+  .   .  .    .    .    .    .    .    .   .   .  .   .      }
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  3   1  0    1    0    0    1    0    0   1   .  .   .      if (f.key_file.exists)
+  .   .  .    .    .    .    .    .    .   .   .  .   .      {
+  3   1  0    0    0    0    0    0    0   1   .  .   .          if (!f.key_file.value)
+  .   .  .    .    .    .    .    .    .   .   .  .   .          {
+  .   .  .    .    .    .    .    .    .   .   .  .   .              error("%s", "key-file flag called without filename");
+  .   .  .    .    .    .    .    .    .   .   .  .   .              return 1;
+  .   .  .    .    .    .    .    .    .   .   .  .   .          }
+  3   0  1    1    0    0    1    .    .   .   .  .   .          File kf = open_and_map_file(f.key_file.value, PM_READ_ONLY);
+155  31 25   17    1    0   17    0    0  22   6  3   3  => /home/emilija/Desktop/password-manager-master/source/console/pm_io.c:open_and_map_file (1x)
+  3   2  .    .    .    .    .    .    .   .   .  .   .          memcpy(aes_key, kf.start, kf.size < 32 ? kf.size : 32);
+  8   3  4    1    0    0    1    0    0   1   .  .   .          UNMAP_AND_CLOSE_FILE(kf);
+ 35  10  3    5    1    0    5    0    0   5   0  2   2  => /home/emilija/Desktop/password-manager-master/source/console/pm_io.c:unmap_and_close_file (1x)
+  .   .  .    .    .    .    .    .    .   .   .  .   .      }
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  3   1  0    0    0    0    0    0    0   1   1  .   .      if (f.copy.value && !f.label.value)
+  .   .  .    .    .    .    .    .    .   .   .  .   .      {
+  .   .  .    .    .    .    .    .    .   .   .  .   .          f.label.exists = 1;
+  .   .  .    .    .    .    .    .    .   .   .  .   .          f.label.value = f.copy.value;
+  .   .  .    .    .    .    .    .    .   .   .  .   .      }
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  3   1  0    0    0    0    0    0    0   1   .  .   .      if (f.input.exists)
+  .   .  .    .    .    .    .    .    .   .   .  .   .      {
+  .   .  .    .    .    .    .    .    .   .   .  .   .          if (f.input.value)
+  .   .  .    .    .    .    .    .    .   .   .  .   .          {
+  .   .  .    .    .    .    .    .    .   .   .  .   .              data_store = f.input.value;
+  .   .  .    .    .    .    .    .    .   .   .  .   .          }
+  .   .  .    .    .    .    .    .    .   .   .  .   .          else
+  .   .  .    .    .    .    .    .    .   .   .  .   .          {
+  .   .  .    .    .    .    .    .    .   .   .  .   .              error("%s", "input flag called without file path");
+  .   .  .    .    .    .    .    .    .   .   .  .   .              return 1;
+  .   .  .    .    .    .    .    .    .   .   .  .   .          }
+  .   .  .    .    .    .    .    .    .   .   .  .   .      }
+  .   .  .    .    .    .    .    .    .   .   .  .   .      else
+  .   .  .    .    .    .    .    .    .   .   .  .   .      {
+  2   0  1    1    0    0    1    .    .   .   .  .   .          data_store = DEFAULT_DATA_STORE;
+  .   .  .    .    .    .    .    .    .   .   .  .   .      }
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  3   1  0    0    0    0    0    0    0   1   1  .   .      if (f.delete_label.exists)
+  .   .  .    .    .    .    .    .    .   .   .  .   .      {
+  .   .  .    .    .    .    .    .    .   .   .  .   .          if (f.delete_label.value)
+  .   .  .    .    .    .    .    .    .   .   .  .   .          {
+  .   .  .    .    .    .    .    .    .   .   .  .   .              delete_label(&f, PM_STR(f.delete_label.value), aes_key);
+  .   .  .    .    .    .    .    .    .   .   .  .   .              return 0;
+  .   .  .    .    .    .    .    .    .   .   .  .   .          }
+  .   .  .    .    .    .    .    .    .   .   .  .   .          else
+  .   .  .    .    .    .    .    .    .   .   .  .   .          {
+  .   .  .    .    .    .    .    .    .   .   .  .   .              error("%s", "delete-label flag called without label");
+  .   .  .    .    .    .    .    .    .   .   .  .   .              return 1;
+  .   .  .    .    .    .    .    .    .   .   .  .   .          }
+  .   .  .    .    .    .    .    .    .   .   .  .   .      }
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  3   1  0    1    0    0    1    0    0   1   1  .   .      if (!f.data.exists)
+  .   .  .    .    .    .    .    .    .   .   .  .   .      {
+  3   1  0    1    0    0    1    0    0   1   1  .   .          if (f.data_file.exists)
+  .   .  .    .    .    .    .    .    .   .   .  .   .          {
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  .   .  .    .    .    .    .    .    .   .   .  .   .              if (f.generate_password.exists)
+  .   .  .    .    .    .    .    .    .   .   .  .   .              {
+  .   .  .    .    .    .    .    .    .   .   .  .   .                  error("%s", "can't combine data-file and "
+  .   .  .    .    .    .    .    .    .   .   .  .   .                              "generate-password flags");
+  .   .  .    .    .    .    .    .    .   .   .  .   .                  return 1;
+  .   .  .    .    .    .    .    .    .   .   .  .   .              }
+-- line 202 ----------------------------------------
+-- line 240 ----------------------------------------
+  .   .  .    .    .    .    .    .    .   .   .  .   .                  encrypt_and_replace(&f, s, PM_STR(f.label.value), aes_key);
+  .   .  .    .    .    .    .    .    .   .   .  .   .              else
+  .   .  .    .    .    .    .    .    .   .   .  .   .                  encrypt_and_write(&f, s, aes_key);
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  .   .  .    .    .    .    .    .    .   .   .  .   .              free(s.data);
+  .   .  .    .    .    .    .    .    .   .   .  .   .              UNMAP_AND_CLOSE_FILE(file);
+  .   .  .    .    .    .    .    .    .   .   .  .   .              return 0;
+  .   .  .    .    .    .    .    .    .   .   .  .   .          }
+  6   2  0    1    0    0    1    0    0   2   .  .   .          if (f.b64enc.exists && f.b64enc.value)
+  .   .  .    .    .    .    .    .    .   .   .  .   .          {
+  .   .  .    .    .    .    .    .    .   .   .  .   .              String str = PM_STR(f.b64enc.value);
+  .   .  .    .    .    .    .    .    .   .   .  .   .              b64_encrypt(&f, str, aes_key);
+  .   .  .    .    .    .    .    .    .   .   .  .   .              return 0;
+  .   .  .    .    .    .    .    .    .   .   .  .   .          }
+  .   .  .    .    .    .    .    .    .   .   .  .   .          if (f.b64dec.exists && f.b64dec.value)
+  .   .  .    .    .    .    .    .    .   .   .  .   .          {
+  .   .  .    .    .    .    .    .    .   .   .  .   .              String str = PM_STR(f.b64dec.value);
+-- line 256 ----------------------------------------
+-- line 331 ----------------------------------------
+  .   .  .    .    .    .    .    .    .   .   .  .   .      if (f.generate_password.exists)
+  .   .  .    .    .    .    .    .    .   .   .  .   .      {
+  .   .  .    .    .    .    .    .    .   .   .  .   .          error("%s", "can't combine data and generate-password flags");
+  .   .  .    .    .    .    .    .    .   .   .  .   .          return 1;
+  .   .  .    .    .    .    .    .    .   .   .  .   .      }
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  .   .  .    .    .    .    .    .    .   .   .  .   .      if (f.b64enc.exists)
+  .   .  .    .    .    .    .    .    .   .   .  .   .      {
+  3   0  1    .    .    .    .    .    .   .   .  .   .          String str = PM_STR(f.data.value);
+ 18   3  0    0    0    0    0    0    0   2   1  1   1  => ???:0x000000000010a340 (1x)
+  4   0  1    1    0    0    1    .    .   .   .  .   .          b64_encrypt(&f, str, aes_key);
+83,031 16,663 1,835  195 1,218   84  195  855   47 16,807 2,205 44  21  => /home/emilija/Desktop/password-manager-master/source/console/pm_xcrypt.c:b64_encrypt (1x)
+  1   .  .    .    .    .    .    .    .   .   .  .   .          return 0;
+  .   .  .    .    .    .    .    .    .   .   .  .   .      }
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  .   .  .    .    .    .    .    .    .   .   .  .   .      if (f.b64dec.exists)
+  .   .  .    .    .    .    .    .    .   .   .  .   .      {
+  .   .  .    .    .    .    .    .    .   .   .  .   .          String str = PM_STR(f.data.value);
+  .   .  .    .    .    .    .    .    .   .   .  .   .          b64_decrypt(&f, str, aes_key);
+  .   .  .    .    .    .    .    .    .   .   .  .   .          return 0;
+  .   .  .    .    .    .    .    .    .   .   .  .   .      }
+-- line 349 ----------------------------------------
+-- line 358 ----------------------------------------
+  .   .  .    .    .    .    .    .    .   .   .  .   .          encrypt_and_replace(&f, PM_STR(f.data.value), PM_STR(f.label.value), aes_key);
+  .   .  .    .    .    .    .    .    .   .   .  .   .      }
+  .   .  .    .    .    .    .    .    .   .   .  .   .      else
+  .   .  .    .    .    .    .    .    .   .   .  .   .      {
+  .   .  .    .    .    .    .    .    .   .   .  .   .          encrypt_and_write(&f, PM_STR(f.data.value), aes_key);
+  .   .  .    .    .    .    .    .    .   .   .  .   .      }
+  .   .  .    .    .    .    .    .    .   .   .  .   .  
+  .   .  .    .    .    .    .    .    .   .   .  .   .      return 0;
+ 12   9  0    0    2    0    0    0    0   1   .  .   .  }
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /home/emilija/Desktop/password-manager-master/source/console/pm_b64.c
+--------------------------------------------------------------------------------
+Ir Dr Dw I1mr D1mr D1mw ILmr DLmr DLmw Bc Bcm Bi Bim 
+
+-- line 94 ----------------------------------------
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .      if (out_len != 0)
+ .  .  .    .    .    .    .    .    .  .   .  .   .          *out_len = ln;
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .      return dec;
+ .  .  .    .    .    .    .    .    .  .   .  .   .  }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .  char *b64_encode(const uint8_t *src, size_t len, size_t *out_len)
+11  1  4    2    0    0    2    .    .  .   .  .   .  {
+ .  .  .    .    .    .    .    .    .  .   .  .   .      int i = 0;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      int j = 0;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      char *enc = 0;
+ 1  .  .    .    .    .    .    .    .  .   .  .   .      size_t ln = 0;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      uint8_t buf[4];
+ .  .  .    .    .    .    .    .    .  .   .  .   .      uint8_t tmp[3];
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+10  0  1    .    .    .    .    .    .  .   .  .   .      enc = (char *)calloc(1, (((4 * len / 3) + 3) & ~3) + 1);
+75,220 15,098 639   92 1,197   80   92  847   45 16,359 2,123 25  13  => ???:0x000000000010a3f0 (1x)
+ 2  0  0    0    0    0    0    0    0  1   .  .   .      ASSERT_ALLOC(enc);
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+29  0  0    0    0    0    0    0    0  9   3  .   .      while (len--)
+ .  .  .    .    .    .    .    .    .  .   .  .   .      {
+53  8  8    2    1    0    2    0    0  1   .  .   .          tmp[i++] = *(src++);
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+14  0  0    0    0    0    0    0    0  7   4  .   .          if (3 == i)
+ .  .  .    .    .    .    .    .    .  .   .  .   .          {
+ 6  2  0    2    0    0    2    .    .  .   .  .   .              buf[0] = (tmp[0] & 0xfc) >> 2;
+12  2  .    .    .    .    .    .    .  .   .  .   .              buf[1] = ((tmp[0] & 0x03) << 4) + ((tmp[1] & 0xf0) >> 4);
+12  2  .    .    .    .    .    .    .  .   .  .   .              buf[2] = ((tmp[1] & 0x0f) << 2) + ((tmp[2] & 0xc0) >> 6);
+ .  .  .    .    .    .    .    .    .  .   .  .   .              buf[3] = tmp[2] & 0x3f;
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .              for (i = 0; i < 4; ++i)
+ .  .  .    .    .    .    .    .    .  .   .  .   .              {
+32  8  8    1    1    0    1    1    .  .   .  .   .                  enc[ln++] = b64_table[buf[i]];
+ .  .  .    .    .    .    .    .    .  .   .  .   .              }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ 2  .  .    .    .    .    .    .    .  .   .  .   .              i = 0;
+ .  .  .    .    .    .    .    .    .  .   .  .   .          }
+ .  .  .    .    .    .    .    .    .  .   .  .   .      }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ 2  0  0    0    0    0    0    0    0  1   .  .   .      if (i > 0)
+ .  .  .    .    .    .    .    .    .  .   .  .   .      {
+ .  .  .    .    .    .    .    .    .  .   .  .   .          for (j = i; j < 3; ++j)
+ .  .  .    .    .    .    .    .    .  .   .  .   .          {
+14  0  1    1    0    0    1    0    0  2   .  .   .              tmp[j] = '\0';
+ .  .  .    .    .    .    .    .    .  .   .  .   .          }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ 3  1  .    .    .    .    .    .    .  .   .  .   .          buf[0] = (tmp[0] & 0xfc) >> 2;
+ 5  1  .    .    .    .    .    .    .  .   .  .   .          buf[1] = ((tmp[0] & 0x03) << 4) + ((tmp[1] & 0xf0) >> 4);
+ 5  1  0    1    0    0    1    .    .  .   .  .   .          buf[2] = ((tmp[1] & 0x0f) << 2) + ((tmp[2] & 0xc0) >> 6);
+ .  .  .    .    .    .    .    .    .  .   .  .   .          buf[3] = tmp[2] & 0x3f;
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ 2  0  0    0    0    0    0    0    0  1   .  .   .          for (j = 0; (j < i + 1); ++j)
+ .  .  .    .    .    .    .    .    .  .   .  .   .          {
+13  3  3    1    0    0    1    .    .  .   .  .   .              enc[ln++] = b64_table[buf[j]];
+ .  .  .    .    .    .    .    .    .  .   .  .   .          }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .          while ((i++ < 3))
+ .  .  .    .    .    .    .    .    .  .   .  .   .          {
+15  0  1    0    0    0    0    0    0  2   .  .   .              enc[ln++] = '=';
+ .  .  .    .    .    .    .    .    .  .   .  .   .          }
+ .  .  .    .    .    .    .    .    .  .   .  .   .      }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ 1  0  1    .    .    .    .    .    .  .   .  .   .      enc[ln] = '\0';
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ 2  0  0    0    0    0    0    0    0  1   .  .   .      if (out_len != 0)
+ 1  0  1    0    0    1    .    .    .  .   .  .   .          *out_len = ln;
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .      return enc;
+ 8  6  0    0    0    0    0    0    0  1   .  .   .  }
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /home/emilija/Desktop/password-manager-master/source/console/pm_aes.c
+--------------------------------------------------------------------------------
+Ir    Dr  Dw  I1mr D1mr D1mw ILmr DLmr DLmw Bc Bcm Bi Bim 
+
+-- line 155 ----------------------------------------
+    .   .   .    .    .    .    .    .    .  .   .  .   .  #define getSBoxValue(num) (sbox[(num)])
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .  uint8_t aes_iv[] = {0xf0, 0xf1, 0xf2, 0xf3, 0xf4, 0xf5, 0xf6, 0xf7,
+    .   .   .    .    .    .    .    .    .  .   .  .   .                      0xf8, 0xf9, 0xfa, 0xfb, 0xfc, 0xfd, 0xfe, 0xff};
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .  // This function produces Nb(Nr+1) round keys. The round keys are used in each
+    .   .   .    .    .    .    .    .    .  .   .  .   .  // round to decrypt the states.
+    .   .   .    .    .    .    .    .    .  .   .  .   .  static void KeyExpansion(uint8_t *RoundKey, const uint8_t *Key)
+    4   0   1    0    0    0    0    0    0  1   .  .   .  {
+    .   .   .    .    .    .    .    .    .  .   .  .   .      unsigned i, j, k;
+    .   .   .    .    .    .    .    .    .  .   .  .   .      uint8_t tempa[4]; // Used for the column/row operations
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .      // The first round key is the key itself.
+    3   2   0    1    0    0    1    .    .  .   .  .   .      for (i = 0; i < Nk; ++i)
+    .   .   .    .    .    .    .    .    .  .   .  .   .      {
+    4   2   2    .    .    .    .    .    .  .   .  .   .          RoundKey[(i * 4) + 0] = Key[(i * 4) + 0];
+    .   .   .    .    .    .    .    .    .  .   .  .   .          RoundKey[(i * 4) + 1] = Key[(i * 4) + 1];
+    .   .   .    .    .    .    .    .    .  .   .  .   .          RoundKey[(i * 4) + 2] = Key[(i * 4) + 2];
+    .   .   .    .    .    .    .    .    .  .   .  .   .          RoundKey[(i * 4) + 3] = Key[(i * 4) + 3];
+    .   .   .    .    .    .    .    .    .  .   .  .   .      }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .      // All other round keys are found from the previous round keys.
+  209   0   0    0    0    0    0    0    0 52   1  .   .      for (i = Nk; i < Nb * (Nr + 1); ++i)
+    .   .   .    .    .    .    .    .    .  .   .  .   .      {
+    .   .   .    .    .    .    .    .    .  .   .  .   .          {
+    .   .   .    .    .    .    .    .    .  .   .  .   .              k = (i - 1) * 4;
+    .   .   .    .    .    .    .    .    .  .   .  .   .              tempa[0] = RoundKey[k + 0];
+    .   .   .    .    .    .    .    .    .  .   .  .   .              tempa[1] = RoundKey[k + 1];
+    .   .   .    .    .    .    .    .    .  .   .  .   .              tempa[2] = RoundKey[k + 2];
+    .   .   .    .    .    .    .    .    .  .   .  .   .              tempa[3] = RoundKey[k + 3];
+    .   .   .    .    .    .    .    .    .  .   .  .   .          }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+  156   0   0    1    0    0    1    0    0 52   6  .   .          if (i % Nk == 0)
+    .   .   .    .    .    .    .    .    .  .   .  .   .          {
+    .   .   .    .    .    .    .    .    .  .   .  .   .              // This function shifts the 4 bytes in a word to the left once.
+    .   .   .    .    .    .    .    .    .  .   .  .   .              // [a0,a1,a2,a3] becomes [a1,a2,a3,a0]
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .              // Function RotWord()
+    .   .   .    .    .    .    .    .    .  .   .  .   .              {
+    .   .   .    .    .    .    .    .    .  .   .  .   .                  const uint8_t u8tmp = tempa[0];
+    .   .   .    .    .    .    .    .    .  .   .  .   .                  tempa[0] = tempa[1];
+-- line 195 ----------------------------------------
+-- line 199 ----------------------------------------
+    .   .   .    .    .    .    .    .    .  .   .  .   .              }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .              // SubWord() is a function that takes a four-byte input word and
+    .   .   .    .    .    .    .    .    .  .   .  .   .              // applies the S-box to each of the four bytes to produce an output
+    .   .   .    .    .    .    .    .    .  .   .  .   .              // word.
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .              // Function Subword()
+    .   .   .    .    .    .    .    .    .  .   .  .   .              {
+   14   7   0    0    1    0    0    1    .  .   .  .   .                  tempa[0] = getSBoxValue(tempa[0]);
+   14   7   0    0    1    0    0    1    .  .   .  .   .                  tempa[1] = getSBoxValue(tempa[1]);
+   14   7   .    .    .    .    .    .    .  .   .  .   .                  tempa[2] = getSBoxValue(tempa[2]);
+   14   7   0    0    1    0    0    1    .  .   .  .   .                  tempa[3] = getSBoxValue(tempa[3]);
+    .   .   .    .    .    .    .    .    .  .   .  .   .              }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+   30   7   0    0    1    0    0    1    .  .   .  .   .              tempa[0] = tempa[0] ^ Rcon[i / Nk];
+    .   .   .    .    .    .    .    .    .  .   .  .   .          }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  #if defined(AES256) && (AES256 == 1)
+   90   0   0    1    0    0    1    0    0 45  16  .   .          if (i % Nk == 4)
+    .   .   .    .    .    .    .    .    .  .   .  .   .          {
+    .   .   .    .    .    .    .    .    .  .   .  .   .              // Function Subword()
+    .   .   .    .    .    .    .    .    .  .   .  .   .              {
+   15   8   0    1    0    0    1    .    .  .   .  .   .                  tempa[0] = getSBoxValue(tempa[0]);
+   12   6   .    .    .    .    .    .    .  .   .  .   .                  tempa[1] = getSBoxValue(tempa[1]);
+   12   6   0    0    1    0    0    1    .  .   .  .   .                  tempa[2] = getSBoxValue(tempa[2]);
+   18   6   .    .    .    .    .    .    .  .   .  .   .                  tempa[3] = getSBoxValue(tempa[3]);
+    .   .   .    .    .    .    .    .    .  .   .  .   .              }
+    .   .   .    .    .    .    .    .    .  .   .  .   .          }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  #endif
+    .   .   .    .    .    .    .    .    .  .   .  .   .          j = i * 4;
+    .   .   .    .    .    .    .    .    .  .   .  .   .          k = (i - Nk) * 4;
+  104  52  52    .    .    .    .    .    .  .   .  .   .          RoundKey[j + 0] = RoundKey[k + 0] ^ tempa[0];
+  104  52  52    .    .    .    .    .    .  .   .  .   .          RoundKey[j + 1] = RoundKey[k + 1] ^ tempa[1];
+  104  52  52    .    .    .    .    .    .  .   .  .   .          RoundKey[j + 2] = RoundKey[k + 2] ^ tempa[2];
+  104  52  52    .    .    .    .    .    .  .   .  .   .          RoundKey[j + 3] = RoundKey[k + 3] ^ tempa[3];
+    .   .   .    .    .    .    .    .    .  .   .  .   .      }
+    2   2   .    .    .    .    .    .    .  .   .  .   .  }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .  void AES_init_ctx(struct AES_ctx *ctx, const uint8_t *key)
+    .   .   .    .    .    .    .    .    .  .   .  .   .  {
+    .   .   .    .    .    .    .    .    .  .   .  .   .      KeyExpansion(ctx->RoundKey, key);
+    .   .   .    .    .    .    .    .    .  .   .  .   .  }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  #if (defined(CBC) && (CBC == 1)) || (defined(CTR) && (CTR == 1))
+    .   .   .    .    .    .    .    .    .  .   .  .   .  void AES_init_ctx_iv(struct AES_ctx *ctx, const uint8_t *key, const uint8_t *iv)
+    6   0   2    1    0    0    1    .    .  .   .  .   .  {
+    1   0   1    .    .    .    .    .    .  .   .  .   .      KeyExpansion(ctx->RoundKey, key);
+1,027 275 211    4    5    0    4    5    0 150  23  .   .  => /home/emilija/Desktop/password-manager-master/source/console/pm_aes.c:KeyExpansion (1x)
+    .   .   .    .    .    .    .    .    .  .   .  .   .      memcpy(ctx->Iv, iv, AES_BLOCKLEN);
+    4   3   .    .    .    .    .    .    .  .   .  .   .  }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  void AES_ctx_set_iv(struct AES_ctx *ctx, const uint8_t *iv)
+    .   .   .    .    .    .    .    .    .  .   .  .   .  {
+    .   .   .    .    .    .    .    .    .  .   .  .   .      memcpy(ctx->Iv, iv, AES_BLOCKLEN);
+    .   .   .    .    .    .    .    .    .  .   .  .   .  }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  #endif
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .  // This function adds the round key to state.
+    .   .   .    .    .    .    .    .    .  .   .  .   .  // The round key is added to the state by an XOR function.
+    .   .   .    .    .    .    .    .    .  .   .  .   .  static void AddRoundKey(uint8_t round, state_t *state, const uint8_t *RoundKey)
+    .   .   .    .    .    .    .    .    .  .   .  .   .  {
+    .   .   .    .    .    .    .    .    .  .   .  .   .      uint8_t i, j;
+   25  16   5    1    0    0    1    .    .  .   .  .   .      for (i = 0; i < 4; ++i)
+    .   .   .    .    .    .    .    .    .  .   .  .   .      {
+    .   .   .    .    .    .    .    .    .  .   .  .   .          for (j = 0; j < 4; ++j)
+    .   .   .    .    .    .    .    .    .  .   .  .   .          {
+  608 317 263    3    0    0    3    .    .  .   .  .   .              (*state)[i][j] ^= RoundKey[(round * Nb * 4) + (i * Nb) + j];
+    .   .   .    .    .    .    .    .    .  .   .  .   .          }
+    .   .   .    .    .    .    .    .    .  .   .  .   .      }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .  // The SubBytes Function Substitutes the values in the
+    .   .   .    .    .    .    .    .    .  .   .  .   .  // state matrix with values in an S-box.
+    .   .   .    .    .    .    .    .    .  .   .  .   .  static void SubBytes(state_t *state)
+    .   .   .    .    .    .    .    .    .  .   .  .   .  {
+    .   .   .    .    .    .    .    .    .  .   .  .   .      uint8_t i, j;
+    .   .   .    .    .    .    .    .    .  .   .  .   .      for (i = 0; i < 4; ++i)
+    .   .   .    .    .    .    .    .    .  .   .  .   .      {
+    .   .   .    .    .    .    .    .    .  .   .  .   .          for (j = 0; j < 4; ++j)
+    .   .   .    .    .    .    .    .    .  .   .  .   .          {
+1,246 392 168    7    0    0    7    .    .  .   .  .   .              (*state)[j][i] = getSBoxValue((*state)[j][i]);
+    .   .   .    .    .    .    .    .    .  .   .  .   .          }
+    .   .   .    .    .    .    .    .    .  .   .  .   .      }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .  // The ShiftRows() function shifts the rows in the state to the left.
+    .   .   .    .    .    .    .    .    .  .   .  .   .  // Each row is shifted with different offset.
+    .   .   .    .    .    .    .    .    .  .   .  .   .  // Offset = Row number. So the first row is not shifted.
+    .   .   .    .    .    .    .    .    .  .   .  .   .  static void ShiftRows(state_t *state)
+-- line 283 ----------------------------------------
+-- line 303 ----------------------------------------
+    .   .   .    .    .    .    .    .    .  .   .  .   .      // Rotate third row 3 columns to left
+    .   .   .    .    .    .    .    .    .  .   .  .   .      temp = (*state)[0][3];
+    .   .   .    .    .    .    .    .    .  .   .  .   .      (*state)[0][3] = (*state)[3][3];
+    .   .   .    .    .    .    .    .    .  .   .  .   .      (*state)[3][3] = (*state)[2][3];
+    .   .   .    .    .    .    .    .    .  .   .  .   .      (*state)[2][3] = (*state)[1][3];
+    .   .   .    .    .    .    .    .    .  .   .  .   .      (*state)[1][3] = temp;
+    .   .   .    .    .    .    .    .    .  .   .  .   .  }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+1,625  13   0    6    0    0    6    .    .  .   .  .   .  static uint8_t xtime(uint8_t x) { return ((x << 1) ^ (((x >> 7) & 1) * 0x1b)); }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .  // MixColumns function mixes the columns of the state matrix
+    .   .   .    .    .    .    .    .    .  .   .  .   .  static void MixColumns(state_t *state)
+    .   .   .    .    .    .    .    .    .  .   .  .   .  {
+    .   .   .    .    .    .    .    .    .  .   .  .   .      uint8_t i;
+    .   .   .    .    .    .    .    .    .  .   .  .   .      uint8_t Tmp, Tm, t;
+    .   .   .    .    .    .    .    .    .  .   .  .   .      for (i = 0; i < 4; ++i)
+    .   .   .    .    .    .    .    .    .  .   .  .   .      {
+    .   .   .    .    .    .    .    .    .  .   .  .   .          t = (*state)[i][0];
+  312  52   0    2    0    0    2    .    .  .   .  .   .          Tmp = (*state)[i][0] ^ (*state)[i][1] ^ (*state)[i][2] ^ (*state)[i][3];
+    .   .   .    .    .    .    .    .    .  .   .  .   .          Tm = (*state)[i][0] ^ (*state)[i][1];
+    .   .   .    .    .    .    .    .    .  .   .  .   .          Tm = xtime(Tm);
+  312   0 104    1    0    0    1    .    .  .   .  .   .          (*state)[i][0] ^= Tm ^ Tmp;
+  143  13   0    3    0    0    3    .    .  .   .  .   .          Tm = (*state)[i][1] ^ (*state)[i][2];
+    .   .   .    .    .    .    .    .    .  .   .  .   .          Tm = xtime(Tm);
+  208   0  65    1    0    0    1    .    .  .   .  .   .          (*state)[i][1] ^= Tm ^ Tmp;
+    .   .   .    .    .    .    .    .    .  .   .  .   .          Tm = (*state)[i][2] ^ (*state)[i][3];
+    .   .   .    .    .    .    .    .    .  .   .  .   .          Tm = xtime(Tm);
+  234  13  78    .    .    .    .    .    .  .   .  .   .          (*state)[i][2] ^= Tm ^ Tmp;
+   91  26   .    .    .    .    .    .    .  .   .  .   .          Tm = (*state)[i][3] ^ t;
+    .   .   .    .    .    .    .    .    .  .   .  .   .          Tm = xtime(Tm);
+  208  39  65    .    .    .    .    .    .  .   .  .   .          (*state)[i][3] ^= Tm ^ Tmp;
+    .   .   .    .    .    .    .    .    .  .   .  .   .      }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .  // Multiply is used to multiply numbers in the field GF(2^8)
+    .   .   .    .    .    .    .    .    .  .   .  .   .  // Note: The last call to xtime() is unneeded, but often ends up generating a
+    .   .   .    .    .    .    .    .    .  .   .  .   .  // smaller binary
+    .   .   .    .    .    .    .    .    .  .   .  .   .  //       The compiler seems to be able to vectorize the operation better this
+    .   .   .    .    .    .    .    .    .  .   .  .   .  //       way. See https://github.com/kokke/tiny-AES-c/pull/34
+-- line 341 ----------------------------------------
+-- line 420 ----------------------------------------
+    .   .   .    .    .    .    .    .    .  .   .  .   .      (*state)[1][3] = (*state)[2][3];
+    .   .   .    .    .    .    .    .    .  .   .  .   .      (*state)[2][3] = (*state)[3][3];
+    .   .   .    .    .    .    .    .    .  .   .  .   .      (*state)[3][3] = temp;
+    .   .   .    .    .    .    .    .    .  .   .  .   .  }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  #endif // #if (defined(CBC) && CBC == 1) || (defined(ECB) && ECB == 1)
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .  // Cipher is the main function that encrypts the PlainText.
+    .   .   .    .    .    .    .    .    .  .   .  .   .  static void Cipher(state_t *state, const uint8_t *RoundKey)
+   11   0   7    1    0    0    1    0    0  1   .  .   .  {
+    .   .   .    .    .    .    .    .    .  .   .  .   .      uint8_t round = 0;
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .      // Add the First round key to the state before starting the rounds.
+    .   .   .    .    .    .    .    .    .  .   .  .   .      AddRoundKey(0, state, RoundKey);
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .      // There will be Nr rounds.
+    .   .   .    .    .    .    .    .    .  .   .  .   .      // The first Nr-1 rounds are identical.
+    .   .   .    .    .    .    .    .    .  .   .  .   .      // These Nr rounds are executed in the loop below.
+    .   .   .    .    .    .    .    .    .  .   .  .   .      // Last one without MixColumns()
+    .   .   .    .    .    .    .    .    .  .   .  .   .      for (round = 1;; ++round)
+    .   .   .    .    .    .    .    .    .  .   .  .   .      {
+    .   .   .    .    .    .    .    .    .  .   .  .   .          SubBytes(state);
+    .   .   .    .    .    .    .    .    .  .   .  .   .          ShiftRows(state);
+   31  15   0    0    0    0    0    0    0 15  11  .   .          if (round == Nr)
+    .   .   .    .    .    .    .    .    .  .   .  .   .          {
+    .   .   .    .    .    .    .    .    .  .   .  .   .              break;
+    .   .   .    .    .    .    .    .    .  .   .  .   .          }
+    .   .   .    .    .    .    .    .    .  .   .  .   .          MixColumns(state);
+    .   .   .    .    .    .    .    .    .  .   .  .   .          AddRoundKey(round, state, RoundKey);
+    .   .   .    .    .    .    .    .    .  .   .  .   .      }
+    .   .   .    .    .    .    .    .    .  .   .  .   .      // Add round key to last round
+    .   .   .    .    .    .    .    .    .  .   .  .   .      AddRoundKey(Nr, state, RoundKey);
+    7   7   0    1    0    0    1    .    .  .   .  .   .  }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .  #if (defined(CBC) && CBC == 1) || (defined(ECB) && ECB == 1)
+    .   .   .    .    .    .    .    .    .  .   .  .   .  static void InvCipher(state_t *state, const uint8_t *RoundKey)
+    .   .   .    .    .    .    .    .    .  .   .  .   .  {
+    .   .   .    .    .    .    .    .    .  .   .  .   .      uint8_t round = 0;
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .      // Add the First round key to the state before starting the rounds.
+    .   .   .    .    .    .    .    .    .  .   .  .   .      AddRoundKey(Nr, state, RoundKey);
+-- line 459 ----------------------------------------
+-- line 540 ----------------------------------------
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .  #endif // #if defined(CBC) && (CBC == 1)
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .  #if defined(CTR) && (CTR == 1)
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .  /* Symmetrical operation: same function for encrypting as for decrypting. Note
+    .   .   .    .    .    .    .    .    .  .   .  .   .   * any IV/nonce should never be reused with the same key */
+    .   .   .    .    .    .    .    .    .  .   .  .   .  void AES_CTR_xcrypt_buffer(struct AES_ctx *ctx, uint8_t *buf, size_t length)
+    9   1   4    1    0    0    1    .    .  .   .  .   .  {
+    .   .   .    .    .    .    .    .    .  .   .  .   .      uint8_t buffer[AES_BLOCKLEN];
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .      size_t i;
+    .   .   .    .    .    .    .    .    .  .   .  .   .      int bi;
+   31   0   0    1    0    0    1    0    0  9   4  .   .      for (i = 0, bi = AES_BLOCKLEN; i < length; ++i, ++bi)
+    .   .   .    .    .    .    .    .    .  .   .  .   .      {
+   30   0   0    0    0    0    0    0    0  8   1  .   .          if (bi == AES_BLOCKLEN) /* we need to regen xor compliment in buffer */
+    .   .   .    .    .    .    .    .    .  .   .  .   .          {
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .              memcpy(buffer, ctx->Iv, AES_BLOCKLEN);
+    3   0   2    .    .    .    .    .    .  .   .  .   .              Cipher((state_t *)buffer, ctx->RoundKey);
+5,061 903 755   26    0    0   26    0    0 16  11  .   .  => /home/emilija/Desktop/password-manager-master/source/console/pm_aes.c:Cipher (1x)
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .              /* Increment Iv and handle overflow */
+    2   .   .    .    .    .    .    .    .  .   .  .   .              for (bi = (AES_BLOCKLEN - 1); bi >= 0; --bi)
+    .   .   .    .    .    .    .    .    .  .   .  .   .              {
+    .   .   .    .    .    .    .    .    .  .   .  .   .                  /* inc will overflow */
+    6   2   0    1    0    0    1    0    0  2   2  .   .                  if (ctx->Iv[bi] == 255)
+    .   .   .    .    .    .    .    .    .  .   .  .   .                  {
+    1   0   1    .    .    .    .    .    .  .   .  .   .                      ctx->Iv[bi] = 0;
+    .   .   .    .    .    .    .    .    .  .   .  .   .                      continue;
+    .   .   .    .    .    .    .    .    .  .   .  .   .                  }
+    2   0   1    .    .    .    .    .    .  .   .  .   .                  ctx->Iv[bi] += 1;
+    2   .   .    .    .    .    .    .    .  .   .  .   .                  break;
+    .   .   .    .    .    .    .    .    .  .   .  .   .              }
+    1   .   .    .    .    .    .    .    .  .   .  .   .              bi = 0;
+    .   .   .    .    .    .    .    .    .  .   .  .   .          }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+   16   8   8    .    .    .    .    .    .  .   .  .   .          buf[i] = (buf[i] ^ buffer[bi]);
+    .   .   .    .    .    .    .    .    .  .   .  .   .      }
+    8   6   0    0    0    0    0    0    0  1   .  .   .  }
+    .   .   .    .    .    .    .    .    .  .   .  .   .  
+    .   .   .    .    .    .    .    .    .  .   .  .   .  #endif // #if defined(CTR) && (CTR == 1)
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /home/emilija/Desktop/password-manager-master/source/console/pm_io.c
+--------------------------------------------------------------------------------
+Ir Dr Dw I1mr D1mr D1mw ILmr DLmr DLmw Bc Bcm Bi Bim 
+
+-- line 6 ----------------------------------------
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .  #include <assert.h>
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .  const char *data_store = 0;
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .  File open_file(const char *path, flag_t access)
+ .  .  .    .    .    .    .    .    .  .   .  .   .  {
+ .  .  .    .    .    .    .    .    .  .   .  .   .      File f = open_or_create_file(path, access, 0);
+ 2  0  0    1    0    0    1    0    0  1   .  .   .      EXIT_IF_BAD_FILE_HANDLE(f.handle);
+ .  .  .    .    .    .    .    .    .  .   .  .   .      return f;
+ .  .  .    .    .    .    .    .    .  .   .  .   .  }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .  File create_file(const char *path, flag_t access)
+ .  .  .    .    .    .    .    .    .  .   .  .   .  {
+ .  .  .    .    .    .    .    .    .  .   .  .   .      File f = open_or_create_file(path, access, 1);
+ .  .  .    .    .    .    .    .    .  .   .  .   .      EXIT_IF_BAD_FILE_HANDLE(f.handle);
+ .  .  .    .    .    .    .    .    .  .   .  .   .      return f;
+ .  .  .    .    .    .    .    .    .  .   .  .   .  }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .  File open_and_map_file(const char *path, flag_t access)
+12  1  5    1    0    0    1    .    .  .   .  .   .  {
+ .  .  .    .    .    .    .    .    .  .   .  .   .      File f = open_file(path, access);
+ .  .  .    .    .    .    .    .    .  .   .  .   .      MAP_FILE_(&f);
+ 4  0  4    1    0    0    1    .    .  .   .  .   .      return f;
+10  7  0    0    0    0    0    0    0  1   1  .   .  }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .  File create_and_map_file(const char *path, flag_t access)
+ .  .  .    .    .    .    .    .    .  .   .  .   .  {
+ .  .  .    .    .    .    .    .    .  .   .  .   .      File f = create_file(path, access);
+ .  .  .    .    .    .    .    .    .  .   .  .   .      MAP_FILE_(&f);
+ .  .  .    .    .    .    .    .    .  .   .  .   .      return f;
+ .  .  .    .    .    .    .    .    .  .   .  .   .  }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .  File open_or_create_file(const char *path, flag_t access, int create)
+ .  .  .    .    .    .    .    .    .  .   .  .   .  {
+ 3  0  2    .    .    .    .    .    .  .   .  .   .      File f = {0};
+ .  .  .    .    .    .    .    .    .  .   .  .   .  #ifdef _WIN32
+ .  .  .    .    .    .    .    .    .  .   .  .   .      DWORD dwCreationDisposition;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      if (create && !file_exists(path))
+ .  .  .    .    .    .    .    .    .  .   .  .   .          dwCreationDisposition = CREATE_NEW;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      else
+ .  .  .    .    .    .    .    .    .  .   .  .   .          dwCreationDisposition = OPEN_EXISTING;
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .      DWORD dwDesiredAccess;
+-- line 49 ----------------------------------------
+-- line 73 ----------------------------------------
+ .  .  .    .    .    .    .    .    .  .   .  .   .      {
+ .  .  .    .    .    .    .    .    .  .   .  .   .          CLOSE_FILE(f.handle);
+ .  .  .    .    .    .    .    .    .  .   .  .   .          f.handle = PM_BAD_FILE_HANDLE;
+ .  .  .    .    .    .    .    .    .  .   .  .   .          return f;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  #else
+ .  .  .    .    .    .    .    .    .  .   .  .   .      int flags;
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ 4  0  0    1    0    0    1    0    0  2   .  .   .      switch (access)
+ .  .  .    .    .    .    .    .    .  .   .  .   .      {
+ .  .  .    .    .    .    .    .    .  .   .  .   .      case PM_READ_WRITE:
+ .  .  .    .    .    .    .    .    .  .   .  .   .          flags = O_RDWR;
+ .  .  .    .    .    .    .    .    .  .   .  .   .          break;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      case PM_READ_ONLY:
+ 1  .  .    .    .    .    .    .    .  .   .  .   .          flags = O_RDONLY;
+ .  .  .    .    .    .    .    .    .  .   .  .   .          break;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      default:
+ .  .  .    .    .    .    .    .    .  .   .  .   .      {
+ .  .  .    .    .    .    .    .    .  .   .  .   .          assert(0 && "unreachable");
+ .  .  .    .    .    .    .    .    .  .   .  .   .          exit(1);
+ .  .  .    .    .    .    .    .    .  .   .  .   .      }
+ .  .  .    .    .    .    .    .    .  .   .  .   .      }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .      if (create && !file_exists(path))
+ .  .  .    .    .    .    .    .    .  .   .  .   .          flags |= O_CREAT;
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ 1  0  1    .    .    .    .    .    .  .   .  .   .      f.handle = open(path, flags, 0600);
+ 2  0  0    0    0    0    0    0    0  1   .  .   .      if (f.handle < 0)
+ .  .  .    .    .    .    .    .    .  .   .  .   .      {
+ .  .  .    .    .    .    .    .    .  .   .  .   .          error("open failed (%s: %s)", path, strerror(errno));
+ .  .  .    .    .    .    .    .    .  .   .  .   .          return f;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      }
+ 4  0  1    0    0    0    0    0    0  1   .  .   .      if (!(flags & O_CREAT) && !get_file_size(&f))
+35  9  4    6    0    0    6    0    0  4   2  1   1  => /home/emilija/Desktop/password-manager-master/source/console/pm_io.c:get_file_size (1x)
+ .  .  .    .    .    .    .    .    .  .   .  .   .      {
+ .  .  .    .    .    .    .    .    .  .   .  .   .          CLOSE_FILE(f.handle);
+ .  .  .    .    .    .    .    .    .  .   .  .   .          f.handle = PM_BAD_FILE_HANDLE;
+ .  .  .    .    .    .    .    .    .  .   .  .   .          return f;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  #endif // _WIN32
+ .  .  .    .    .    .    .    .    .  .   .  .   .      f.access = access;
+ 2  2  .    .    .    .    .    .    .  .   .  .   .      return f;
+ .  .  .    .    .    .    .    .    .  .   .  .   .  }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .  int close_file(handle_t handle)
+ .  .  .    .    .    .    .    .    .  .   .  .   .  {
+ .  .  .    .    .    .    .    .    .  .   .  .   .  #ifdef _WIN32
+ .  .  .    .    .    .    .    .    .  .   .  .   .      if (CloseHandle(handle) == 0)
+ .  .  .    .    .    .    .    .    .  .   .  .   .      {
+ .  .  .    .    .    .    .    .    .  .   .  .   .          error("CloseHandle failed (%ld)", GetLastError());
+ .  .  .    .    .    .    .    .    .  .   .  .   .          return 0;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  #else
+ 5  0  1    0    0    0    0    0    0  1   .  .   .      if (close(handle) < 0)
+11  3  0    2    1    0    2    0    0  2   0  1   1  => ???:0x000000000010a3a0 (1x)
+ .  .  .    .    .    .    .    .    .  .   .  .   .      {
+ .  .  .    .    .    .    .    .    .  .   .  .   .          error("close failed (%s)", strerror(errno));
+ .  .  .    .    .    .    .    .    .  .   .  .   .          return 0;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  #endif // _WIN32
+ .  .  .    .    .    .    .    .    .  .   .  .   .      return 1;
+ .  .  .    .    .    .    .    .    .  .   .  .   .  }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+-- line 133 ----------------------------------------
+-- line 164 ----------------------------------------
+ .  .  .    .    .    .    .    .    .  .   .  .   .          return 0;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  #endif // _WIN32
+ .  .  .    .    .    .    .    .    .  .   .  .   .      f->size = new_size;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      return 1;
+ .  .  .    .    .    .    .    .    .  .   .  .   .  }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .  int get_file_size(File *f)
+ 7  1  2    1    0    0    1    .    .  .   .  .   .  {
+ .  .  .    .    .    .    .    .    .  .   .  .   .  #ifdef _WIN32
+ .  .  .    .    .    .    .    .    .  .   .  .   .      LARGE_INTEGER lpFileSize;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      if (!GetFileSizeEx(f->handle, &lpFileSize))
+ .  .  .    .    .    .    .    .    .  .   .  .   .      {
+ .  .  .    .    .    .    .    .    .  .   .  .   .          error("GetFileSizeEx failed (%ld)", GetLastError());
+ .  .  .    .    .    .    .    .    .  .   .  .   .          return 0;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      }
+ .  .  .    .    .    .    .    .    .  .   .  .   .      f->size = lpFileSize.QuadPart;
+ .  .  .    .    .    .    .    .    .  .   .  .   .  #else
+ .  .  .    .    .    .    .    .    .  .   .  .   .      struct stat statbuf;
+ 2  0  0    0    0    0    0    0    0  1   .  .   .      if (fstat(f->handle, &statbuf) < 0)
+ .  .  .    .    .    .    .    .    .  .   .  .   .      {
+ .  .  .    .    .    .    .    .    .  .   .  .   .          error("fstat failed (%s)", strerror(errno));
+ .  .  .    .    .    .    .    .    .  .   .  .   .          return 0;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      }
+ 2  1  1    .    .    .    .    .    .  .   .  .   .      f->size = statbuf.st_size;
+ .  .  .    .    .    .    .    .    .  .   .  .   .  #endif // _WIN32
+ 1  .  .    .    .    .    .    .    .  .   .  .   .      return 1;
+ 6  4  0    1    0    0    1    0    0  1   .  .   .  }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .  int map_file(File *f)
+ .  .  .    .    .    .    .    .    .  .   .  .   .  {
+ .  .  .    .    .    .    .    .    .  .   .  .   .  #ifdef _WIN32
+ .  .  .    .    .    .    .    .    .  .   .  .   .      DWORD flProtect;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      switch (f->access)
+ .  .  .    .    .    .    .    .    .  .   .  .   .      {
+ .  .  .    .    .    .    .    .    .  .   .  .   .      case PM_READ_WRITE:
+-- line 199 ----------------------------------------
+-- line 233 ----------------------------------------
+ .  .  .    .    .    .    .    .    .  .   .  .   .          error("MapViewOfFile failed (%ld)", GetLastError());
+ .  .  .    .    .    .    .    .    .  .   .  .   .          CloseHandle(f->hMap);
+ .  .  .    .    .    .    .    .    .  .   .  .   .          CloseHandle(f->handle);
+ .  .  .    .    .    .    .    .    .  .   .  .   .          return 0;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  #else
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .      int prot;
+ 5  0  0    0    0    0    0    0    0  2   .  .   .      switch (f->access)
+ .  .  .    .    .    .    .    .    .  .   .  .   .      {
+ .  .  .    .    .    .    .    .    .  .   .  .   .      case PM_READ_WRITE:
+ .  .  .    .    .    .    .    .    .  .   .  .   .          prot = PROT_READ | PROT_WRITE;
+ .  .  .    .    .    .    .    .    .  .   .  .   .          break;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      case PM_READ_ONLY:
+ .  .  .    .    .    .    .    .    .  .   .  .   .          prot = PROT_READ;
+ .  .  .    .    .    .    .    .    .  .   .  .   .          break;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      default:
+ .  .  .    .    .    .    .    .    .  .   .  .   .          return 0;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ 8  0  1    0    0    0    0    0    0  1   .  .   .      if ((f->start = mmap(0, f->size, prot, MAP_SHARED,
+22  4  2    3    0    0    3    0    0  4   2  1   1  => ???:0x000000000010a360 (1x)
+ .  .  .    .    .    .    .    .    .  .   .  .   .                           f->handle, 0)) == (void *)-1)
+ .  .  .    .    .    .    .    .    .  .   .  .   .      {
+ .  .  .    .    .    .    .    .    .  .   .  .   .          error("mmap failed (%s)", strerror(errno));
+ .  .  .    .    .    .    .    .    .  .   .  .   .          return 0;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  #endif // _WIN32
+ .  .  .    .    .    .    .    .    .  .   .  .   .      return 1;
+ .  .  .    .    .    .    .    .    .  .   .  .   .  }
+-- line 261 ----------------------------------------
+-- line 269 ----------------------------------------
+ .  .  .    .    .    .    .    .    .  .   .  .   .          return 0;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      }
+ .  .  .    .    .    .    .    .    .  .   .  .   .      if (CloseHandle(f.hMap) == 0)
+ .  .  .    .    .    .    .    .    .  .   .  .   .      {
+ .  .  .    .    .    .    .    .    .  .   .  .   .          error("CloseHandle failed (%ld)", GetLastError());
+ .  .  .    .    .    .    .    .    .  .   .  .   .          return 0;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  #else
+ 6  3  1    0    0    0    0    0    0  1   .  .   .      if (munmap(f.start, f.size) < 0)
+ 8  2  0    2    0    0    2    0    0  1   0  1   1  => ???:0x000000000010a480 (1x)
+ .  .  .    .    .    .    .    .    .  .   .  .   .      {
+ .  .  .    .    .    .    .    .    .  .   .  .   .          error("munmap failed (%s)", strerror(errno));
+ .  .  .    .    .    .    .    .    .  .   .  .   .          return 0;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  #endif // _WIN32
+ .  .  .    .    .    .    .    .    .  .   .  .   .      return 1;
+ .  .  .    .    .    .    .    .    .  .   .  .   .  }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .  int unmap_and_close_file(File f)
+ 2  0  1    1    0    0    1    .    .  .   .  .   .  {
+ 1  .  .    .    .    .    .    .    .  .   .  .   .      return unmap_file(f) && close_file(f.handle);
+ 2  2  .    .    .    .    .    .    .  .   .  .   .  }
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .  int getpasswd(uint8_t *pw)
+ .  .  .    .    .    .    .    .    .  .   .  .   .  {
+ .  .  .    .    .    .    .    .    .  .   .  .   .      int c = 0;
+ .  .  .    .    .    .    .    .    .  .   .  .   .      size_t idx = 0;
+ .  .  .    .    .    .    .    .    .  .   .  .   .  
+ .  .  .    .    .    .    .    .    .  .   .  .   .  #ifndef _WIN32
+ .  .  .    .    .    .    .    .    .  .   .  .   .      struct termios old_kbd_mode;
+-- line 297 ----------------------------------------
+
+--------------------------------------------------------------------------------
+The following files chosen for auto-annotation could not be found:
+--------------------------------------------------------------------------------
+  /build/glibc-LcI20x/glibc-2.31/csu/../csu/libc-start.c
+  /build/glibc-LcI20x/glibc-2.31/elf/../elf/dl-runtime.c
+  /build/glibc-LcI20x/glibc-2.31/elf/../elf/dl-sysdep.c
+  /build/glibc-LcI20x/glibc-2.31/elf/../elf/dl-tls.c
+  /build/glibc-LcI20x/glibc-2.31/elf/../sysdeps/generic/ldsodefs.h
+  /build/glibc-LcI20x/glibc-2.31/elf/../sysdeps/posix/dl-fileid.h
+  /build/glibc-LcI20x/glibc-2.31/elf/../sysdeps/unix/sysv/linux/dl-sysdep.c
+  /build/glibc-LcI20x/glibc-2.31/elf/../sysdeps/x86/cpu-features.c
+  /build/glibc-LcI20x/glibc-2.31/elf/../sysdeps/x86/dl-prop.h
+  /build/glibc-LcI20x/glibc-2.31/elf/../sysdeps/x86_64/dl-machine.h
+  /build/glibc-LcI20x/glibc-2.31/elf/../sysdeps/x86_64/dl-trampoline.h
+  /build/glibc-LcI20x/glibc-2.31/elf/./dl-load.h
+  /build/glibc-LcI20x/glibc-2.31/elf/./dl-map-segments.h
+  /build/glibc-LcI20x/glibc-2.31/elf/dl-addr.c
+  /build/glibc-LcI20x/glibc-2.31/elf/dl-cache.c
+  /build/glibc-LcI20x/glibc-2.31/elf/dl-debug.c
+  /build/glibc-LcI20x/glibc-2.31/elf/dl-deps.c
+  /build/glibc-LcI20x/glibc-2.31/elf/dl-environ.c
+  /build/glibc-LcI20x/glibc-2.31/elf/dl-error-skeleton.c
+  /build/glibc-LcI20x/glibc-2.31/elf/dl-fini.c
+  /build/glibc-LcI20x/glibc-2.31/elf/dl-hwcaps.c
+  /build/glibc-LcI20x/glibc-2.31/elf/dl-init.c
+  /build/glibc-LcI20x/glibc-2.31/elf/dl-load.c
+  /build/glibc-LcI20x/glibc-2.31/elf/dl-lookup.c
+  /build/glibc-LcI20x/glibc-2.31/elf/dl-minimal.c
+  /build/glibc-LcI20x/glibc-2.31/elf/dl-misc.c
+  /build/glibc-LcI20x/glibc-2.31/elf/dl-object.c
+  /build/glibc-LcI20x/glibc-2.31/elf/dl-reloc.c
+  /build/glibc-LcI20x/glibc-2.31/elf/dl-sort-maps.c
+  /build/glibc-LcI20x/glibc-2.31/elf/dl-tunables.c
+  /build/glibc-LcI20x/glibc-2.31/elf/dl-tunables.h
+  /build/glibc-LcI20x/glibc-2.31/elf/dl-version.c
+  /build/glibc-LcI20x/glibc-2.31/elf/do-rel.h
+  /build/glibc-LcI20x/glibc-2.31/elf/get-dynamic-info.h
+  /build/glibc-LcI20x/glibc-2.31/elf/rtld.c
+  /build/glibc-LcI20x/glibc-2.31/io/../sysdeps/unix/sysv/linux/open64_nocancel.c
+  /build/glibc-LcI20x/glibc-2.31/io/../sysdeps/unix/sysv/linux/pread64_nocancel.c
+  /build/glibc-LcI20x/glibc-2.31/io/../sysdeps/unix/sysv/linux/wordsize-64/fxstat.c
+  /build/glibc-LcI20x/glibc-2.31/io/../sysdeps/unix/sysv/linux/wordsize-64/xstat.c
+  /build/glibc-LcI20x/glibc-2.31/libio/fileops.c
+  /build/glibc-LcI20x/glibc-2.31/libio/genops.c
+  /build/glibc-LcI20x/glibc-2.31/malloc/arena.c
+  /build/glibc-LcI20x/glibc-2.31/malloc/malloc.c
+  /build/glibc-LcI20x/glibc-2.31/malloc/scratch_buffer_set_array_size.c
+  /build/glibc-LcI20x/glibc-2.31/misc/../sysdeps/unix/sysv/linux/mmap64.c
+  /build/glibc-LcI20x/glibc-2.31/nptl/../nptl/pthread_mutex_lock.c
+  /build/glibc-LcI20x/glibc-2.31/nptl/../sysdeps/unix/sysv/linux/sigaction.c
+  /build/glibc-LcI20x/glibc-2.31/nptl/libc_pthread_init.c
+  /build/glibc-LcI20x/glibc-2.31/nptl/nptl-init.c
+  /build/glibc-LcI20x/glibc-2.31/nptl/pthread_mutex_unlock.c
+  /build/glibc-LcI20x/glibc-2.31/nptl/register-atfork.c
+  /build/glibc-LcI20x/glibc-2.31/setjmp/../sysdeps/x86_64/setjmp.S
+  /build/glibc-LcI20x/glibc-2.31/stdlib/cxa_finalize.c
+  /build/glibc-LcI20x/glibc-2.31/stdlib/exit.c
+  /build/glibc-LcI20x/glibc-2.31/stdlib/getenv.c
+  /build/glibc-LcI20x/glibc-2.31/string/../bits/stdlib-bsearch.h
+  /build/glibc-LcI20x/glibc-2.31/string/../sysdeps/x86/cacheinfo.c
+  /build/glibc-LcI20x/glibc-2.31/string/../sysdeps/x86_64/multiarch/../strchr.S
+  /build/glibc-LcI20x/glibc-2.31/string/../sysdeps/x86_64/multiarch/../strlen.S
+  /build/glibc-LcI20x/glibc-2.31/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+  /build/glibc-LcI20x/glibc-2.31/string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S
+  /build/glibc-LcI20x/glibc-2.31/string/../sysdeps/x86_64/strcmp.S
+  /build/glibc-LcI20x/glibc-2.31/string/../sysdeps/x86_64/strcspn.S
+  /build/glibc-LcI20x/glibc-2.31/string/strdup.c
+
+--------------------------------------------------------------------------------
+Ir    Dr    Dw    I1mr D1mr D1mw ILmr DLmr DLmw Bc  Bcm Bi Bim 
+--------------------------------------------------------------------------------
+7,638 1,664 1,098   86   13    2   86   10    1 599 174  .   .  events annotated
+
