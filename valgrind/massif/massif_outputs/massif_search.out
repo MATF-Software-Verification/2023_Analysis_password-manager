@@ -1,0 +1,114 @@
+desc: --massif-out-file=massif_outputs/massif_search.out
+cmd: ../../../password-manager-master/pm -kf ../../password-manager-master/key.txt -c '?ass*'
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=208878
+mem_heap_B=10240
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=209489
+mem_heap_B=10277
+mem_heap_extra_B=27
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=237523
+mem_heap_B=10277
+mem_heap_extra_B=27
+mem_stacks_B=0
+heap_tree=detailed
+n2: 10277 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 10240 0x10EC01: glob_compile (pm_glob.c:164)
+  n1: 10240 0x11026D: decrypt_and_print (pm_xcrypt.c:355)
+   n1: 10240 0x10DC14: run (pm_parse.c:303)
+    n0: 10240 0x48A0082: (below main) (libc-start.c:308)
+ n0: 37 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=237523
+mem_heap_B=10240
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=237864
+mem_heap_B=10274
+mem_heap_extra_B=30
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=259887
+mem_heap_B=10240
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=260286
+mem_heap_B=11264
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=261440
+mem_heap_B=11264
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=peak
+n3: 11264 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 10240 0x10EC01: glob_compile (pm_glob.c:164)
+  n1: 10240 0x11026D: decrypt_and_print (pm_xcrypt.c:355)
+   n1: 10240 0x10DC14: run (pm_parse.c:303)
+    n0: 10240 0x48A0082: (below main) (libc-start.c:308)
+ n1: 1024 0x48FDD03: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x490DECF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x490CF2F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x490B6B4: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x490B6B4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x48F2971: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x49AA342: __fprintf_chk (fprintf_chk.c:33)
+        n1: 1024 0x110230: fprintf (stdio2.h:100)
+         n1: 1024 0x110230: decrypt_and_print (pm_xcrypt.c:400)
+          n1: 1024 0x10DC14: run (pm_parse.c:303)
+           n0: 1024 0x48A0082: (below main) (libc-start.c:308)
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=261440
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=265173
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
