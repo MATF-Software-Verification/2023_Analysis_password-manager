@@ -1,0 +1,82 @@
+--------------------------------------------------------------------------------
+Command:            ../../../password-manager-master/pm -kf ../../password-manager-master/key.txt -c '?ass*'
+Massif arguments:   --time-unit=B --massif-out-file=massif_outputs/massif_search_better.out
+ms_print arguments: massif_search_better.out
+--------------------------------------------------------------------------------
+
+
+    KB
+11.02^                                    ################################    
+     |                                    #                                   
+     |                                @:::#                                   
+     |                                @:  #                                   
+     |                                @:  #                                   
+     |                                @:  #                                   
+     |                                @:  #                                   
+     |                                @:  #                                   
+     |                                @:  #                                   
+     |                                @:  #                                   
+     |                                @:  #                                   
+     |                                @:  #                                   
+     |                                @:  #                                   
+     |                                @:  #                                   
+     |                                @:  #                                   
+     |                                @:  #                                   
+     |                                @:  #                                   
+     |                                @:  #                                   
+     |                                @:  #                                   
+     |                                @:  #                               ::: 
+   0 +----------------------------------------------------------------------->KB
+     0                                                                   22.22
+
+Number of snapshots: 11
+ Detailed snapshots: [3, 8 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1         10,248           10,248           10,240             8            0
+  2         10,304           10,304           10,277            27            0
+  3         10,304           10,304           10,277            27            0
+99.74% (10,277B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->99.38% (10,240B) 0x10EC01: glob_compile (pm_glob.c:164)
+| ->99.38% (10,240B) 0x11026D: decrypt_and_print (pm_xcrypt.c:355)
+|   ->99.38% (10,240B) 0x10DC14: run (pm_parse.c:303)
+|     ->99.38% (10,240B) 0x48A0082: (below main) (libc-start.c:308)
+|       
+->00.36% (37B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  4         10,360           10,248           10,240             8            0
+  5         10,400           10,288           10,271            17            0
+  6         10,440           10,248           10,240             8            0
+  7         11,472           11,280           11,264            16            0
+  8         11,472           11,280           11,264            16            0
+99.86% (11,264B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->90.78% (10,240B) 0x10EC01: glob_compile (pm_glob.c:164)
+| ->90.78% (10,240B) 0x11026D: decrypt_and_print (pm_xcrypt.c:355)
+|   ->90.78% (10,240B) 0x10DC14: run (pm_parse.c:303)
+|     ->90.78% (10,240B) 0x48A0082: (below main) (libc-start.c:308)
+|       
+->09.08% (1,024B) 0x48FDD03: _IO_file_doallocate (filedoalloc.c:101)
+| ->09.08% (1,024B) 0x490DECF: _IO_doallocbuf (genops.c:347)
+|   ->09.08% (1,024B) 0x490CF2F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->09.08% (1,024B) 0x490B6B4: _IO_new_file_xsputn (fileops.c:1244)
+|       ->09.08% (1,024B) 0x490B6B4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->09.08% (1,024B) 0x48F2971: __vfprintf_internal (vfprintf-internal.c:1373)
+|           ->09.08% (1,024B) 0x49AA342: __fprintf_chk (fprintf_chk.c:33)
+|             ->09.08% (1,024B) 0x110230: fprintf (stdio2.h:100)
+|               ->09.08% (1,024B) 0x110230: decrypt_and_print (pm_xcrypt.c:400)
+|                 ->09.08% (1,024B) 0x10DC14: run (pm_parse.c:303)
+|                   ->09.08% (1,024B) 0x48A0082: (below main) (libc-start.c:308)
+|                     
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  9         21,720            1,032            1,024             8            0
+ 10         22,752                0                0             0            0
