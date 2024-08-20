@@ -1,0 +1,119 @@
+../password-manager-master/source/console/pm_aes.c:164:20: style: The scope of the variable 'k' can be reduced. [variableScope]
+    unsigned i, j, k;
+                   ^
+../password-manager-master/source/console/pm_aes.c:317:13: style: The scope of the variable 'Tmp' can be reduced. [variableScope]
+    uint8_t Tmp, Tm, t;
+            ^
+../password-manager-master/source/console/pm_aes.c:317:18: style: The scope of the variable 'Tm' can be reduced. [variableScope]
+    uint8_t Tmp, Tm, t;
+                 ^
+../password-manager-master/source/console/pm_aes.c:317:22: style: The scope of the variable 't' can be reduced. [variableScope]
+    uint8_t Tmp, Tm, t;
+                     ^
+../password-manager-master/source/console/pm_aes.c:368:13: style: The scope of the variable 'a' can be reduced. [variableScope]
+    uint8_t a, b, c, d;
+            ^
+../password-manager-master/source/console/pm_aes.c:368:16: style: The scope of the variable 'b' can be reduced. [variableScope]
+    uint8_t a, b, c, d;
+               ^
+../password-manager-master/source/console/pm_aes.c:368:19: style: The scope of the variable 'c' can be reduced. [variableScope]
+    uint8_t a, b, c, d;
+                  ^
+../password-manager-master/source/console/pm_aes.c:368:22: style: The scope of the variable 'd' can be reduced. [variableScope]
+    uint8_t a, b, c, d;
+                     ^
+../password-manager-master/source/console/pm_b64.c:104:9: style: The scope of the variable 'j' can be reduced. [variableScope]
+    int j = 0;
+        ^
+../password-manager-master/source/console/pm_b64.c:15:11: style: Variable 'l' is assigned a value that is never used. [unreadVariable]
+    int l = 0;
+          ^
+../password-manager-master/source/console/pm_b64.c:104:11: style: Variable 'j' is assigned a value that is never used. [unreadVariable]
+    int j = 0;
+          ^
+../password-manager-master/source/console/pm_io.c:149:17: style: Variable 'li.QuadPart' is assigned a value that is never used. [unreadVariable]
+    li.QuadPart = new_size;
+                ^
+../password-manager-master/source/console/pm_parse.c:122:0: information: Skipping configuration 'PM_VERSION' since the value of 'PM_VERSION' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                STR(PM_VERSION)
+^
+../password-manager-master/source/console/pm_rand.c:12:5: warning: Return value of function rand() is not used. [ignoredReturnValue]
+    rand();
+    ^
+../password-manager-master/source/console/pm_xcrypt.c:212:35: style: Local variable 'ctx' shadows outer variable [shadowVariable]
+        xcrypt_and_write_load_ctx ctx = { .file = f, .str = s, .aes_key = aes_key };
+                                  ^
+../password-manager-master/source/console/pm_xcrypt.c:12:23: note: Shadowed declaration
+extern struct AES_ctx ctx;
+                      ^
+../password-manager-master/source/console/pm_xcrypt.c:212:35: note: Shadow variable
+        xcrypt_and_write_load_ctx ctx = { .file = f, .str = s, .aes_key = aes_key };
+                                  ^
+../password-manager-master/source/console/pm_xcrypt.c:288:20: style: Local variable 'ctx' shadows outer variable [shadowVariable]
+    struct AES_ctx ctx;
+                   ^
+../password-manager-master/source/console/pm_xcrypt.c:12:23: note: Shadowed declaration
+extern struct AES_ctx ctx;
+                      ^
+../password-manager-master/source/console/pm_xcrypt.c:288:20: note: Shadow variable
+    struct AES_ctx ctx;
+                   ^
+../password-manager-master/source/console/pm_xcrypt.c:343:25: style: Local variable 'ctx' shadows outer variable [shadowVariable]
+        xcrypt_load_ctx ctx = { .str = file_copy, .aes_key = aes_key };
+                        ^
+../password-manager-master/source/console/pm_xcrypt.c:12:23: note: Shadowed declaration
+extern struct AES_ctx ctx;
+                      ^
+../password-manager-master/source/console/pm_xcrypt.c:343:25: note: Shadow variable
+        xcrypt_load_ctx ctx = { .str = file_copy, .aes_key = aes_key };
+                        ^
+../password-manager-master/source/console/pm_aes.c:527:0: style: The function 'AES_CBC_decrypt_buffer' is never used. [unusedFunction]
+
+^
+../password-manager-master/source/console/pm_aes.c:512:0: style: The function 'AES_CBC_encrypt_buffer' is never used. [unusedFunction]
+
+^
+../password-manager-master/source/console/pm_aes.c:491:0: style: The function 'AES_ECB_decrypt' is never used. [unusedFunction]
+
+^
+../password-manager-master/source/console/pm_aes.c:484:0: style: The function 'AES_ECB_encrypt' is never used. [unusedFunction]
+
+^
+../password-manager-master/source/console/pm_aes.c:246:0: style: The function 'AES_ctx_set_iv' is never used. [unusedFunction]
+
+^
+../password-manager-master/source/console/pm_aes.c:236:0: style: The function 'AES_init_ctx' is never used. [unusedFunction]
+
+^
+../password-manager-master/source/console/pm_thread.c:30:0: style: The function 'OGCreateThread' is never used. [unusedFunction]
+
+^
+../password-manager-master/source/console/pm_thread.c:44:0: style: The function 'OGJoinThread' is never used. [unusedFunction]
+
+^
+../password-manager-master/source/console/pm_thread.c:6:0: style: The function 'calc_thread_load' is never used. [unusedFunction]
+
+^
+../password-manager-master/source/console/pm_sync.c:270:0: style: The function 'cmd_run_sync' is never used. [unusedFunction]
+
+^
+../password-manager-master/source/console/pm_io.c:32:0: style: The function 'create_and_map_file' is never used. [unusedFunction]
+
+^
+../password-manager-master/source/console/pm_sync.c:84:0: style: The function 'cstr_array_make' is never used. [unusedFunction]
+
+^
+../password-manager-master/source/console/test.c:278:0: style: The function 'exit_test_case' is never used. [unusedFunction]
+
+^
+../password-manager-master/source/console/pm_io.c:193:0: style: The function 'map_file' is never used. [unusedFunction]
+
+^
+../password-manager-master/source/console/pm_io.c:145:0: style: The function 'truncate_file' is never used. [unusedFunction]
+
+^
+../password-manager-master/source/console/pm_io.c:286:0: style: The function 'unmap_and_close_file' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
