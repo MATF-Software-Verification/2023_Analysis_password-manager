@@ -1,0 +1,4 @@
+[submodule "password-manager-master"]
+   path = passwor-manager-master
+   url = https://github.com/Ciremun/password-manager
+
