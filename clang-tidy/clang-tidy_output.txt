@@ -1,0 +1,895 @@
+Analiziram fajl: ../password-manager/source/console/pm_aes.c
+6 warnings generated.
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_aes.c:244:5: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+    memcpy(ctx->Iv, iv, AES_BLOCKLEN);
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_aes.c:244:5: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_aes.c:248:5: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+    memcpy(ctx->Iv, iv, AES_BLOCKLEN);
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_aes.c:248:5: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_aes.c:524:5: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+    memcpy(ctx->Iv, Iv, AES_BLOCKLEN);
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_aes.c:524:5: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_aes.c:533:9: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+        memcpy(storeNextIv, buf, AES_BLOCKLEN);
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_aes.c:533:9: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_aes.c:536:9: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+        memcpy(ctx->Iv, storeNextIv, AES_BLOCKLEN);
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_aes.c:536:9: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_aes.c:558:13: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+            memcpy(buffer, ctx->Iv, AES_BLOCKLEN);
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_aes.c:558:13: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+
+Analiziram fajl: ../password-manager/source/console/pm_b64.c
+
+Analiziram fajl: ../password-manager/source/console/pm_glob.c
+
+Analiziram fajl: ../password-manager/source/console/pm_io.c
+1 warning generated.
+/home/emilija/Desktop/20m23_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_io.c:305:5: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+    memcpy(&new_kbd_mode, &old_kbd_mode, sizeof(struct termios));
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_io.c:305:5: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+
+Analiziram fajl: ../password-manager/source/console/pm_main.c
+
+Analiziram fajl: ../password-manager/source/console/pm_parse.c
+5 warnings generated.
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:140:9: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+        memcpy(aes_key, f.key.value, key_len < 32 ? key_len : 32);
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:140:9: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:151:9: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+        memcpy(aes_key, kf.start, kf.size < 32 ? kf.size : 32);
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:151:9: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:225:13: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+            memcpy(s.data, file.start, file.size);
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:225:13: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:240:44: warning: Null pointer passed to 1st parameter expecting 'nonnull' [clang-analyzer-core.NonNullParamChecker]
+                encrypt_and_replace(&f, s, PM_STR(f.label.value), aes_key);
+                                           ^
+../password-manager/include/console/util.h:17:48: note: expanded from macro 'PM_STR'
+    (String) { .data = (uint8_t *)s, .length = strlen(s) }
+                                               ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:81:9: note: Assuming field 'data' is equal to null
+    if (sync_remote_url.data != 0)
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:81:5: note: Taking false branch
+    if (sync_remote_url.data != 0)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:84:5: note: 'f.label.value' initialized to a null pointer value
+    Flags f = {0};
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:85:5: note: Calling 'parse_flags'
+    parse_flags(&f, argc, argv);
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:25:21: note: Assuming 'i' is < 'argc'
+    for (int i = 1; i < argc; i++)
+                    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:25:5: note: Loop condition is true.  Entering loop body
+    for (int i = 1; i < argc; i++)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:28:22: note: Field 'exists' is 0
+        if (!f->data.exists && is_flag(argv[i], "-d", "--data"))
+                     ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:28:13: note: Left side of '&&' is true
+        if (!f->data.exists && is_flag(argv[i], "-d", "--data"))
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:28:9: note: Taking false branch
+        if (!f->data.exists && is_flag(argv[i], "-d", "--data"))
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:30:28: note: Field 'exists' is 0
+        else if (!f->label.exists && is_flag(argv[i], "-l", "--label"))
+                           ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:30:18: note: Left side of '&&' is true
+        else if (!f->label.exists && is_flag(argv[i], "-l", "--label"))
+                 ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:30:14: note: Taking false branch
+        else if (!f->label.exists && is_flag(argv[i], "-l", "--label"))
+             ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:32:27: note: Field 'exists' is 0
+        else if (!f->help.exists && is_flag(argv[i], "-h", "--help"))
+                          ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:32:18: note: Left side of '&&' is true
+        else if (!f->help.exists && is_flag(argv[i], "-h", "--help"))
+                 ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:32:14: note: Taking false branch
+        else if (!f->help.exists && is_flag(argv[i], "-h", "--help"))
+             ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:34:32: note: Field 'exists' is 0
+        else if (!f->data_file.exists && is_flag(argv[i], "-df", "--data-file"))
+                               ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:34:18: note: Left side of '&&' is true
+        else if (!f->data_file.exists && is_flag(argv[i], "-df", "--data-file"))
+                 ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:34:14: note: Taking true branch
+        else if (!f->data_file.exists && is_flag(argv[i], "-df", "--data-file"))
+             ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:59:13: note: 'flag' is non-null
+        if (flag)
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:59:9: note: Taking true branch
+        if (flag)
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:62:13: note: The value 1 is assigned to 'f.data_file.exists', which participates in a condition later
+            flag->exists = 1;
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:63:17: note: Assuming the condition is false
+            if ((i + 1) >= argc)
+                ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:63:13: note: Taking false branch
+            if ((i + 1) >= argc)
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:65:13: note: Value assigned to 'f.data_file.value', which participates in a condition later
+            flag->value = argv[i + 1];
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:25:21: note: 'i' is < 'argc'
+    for (int i = 1; i < argc; i++)
+                    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:25:5: note: Loop condition is true.  Entering loop body
+    for (int i = 1; i < argc; i++)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:28:22: note: Field 'exists' is 0
+        if (!f->data.exists && is_flag(argv[i], "-d", "--data"))
+                     ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:28:13: note: Left side of '&&' is true
+        if (!f->data.exists && is_flag(argv[i], "-d", "--data"))
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:28:9: note: Taking false branch
+        if (!f->data.exists && is_flag(argv[i], "-d", "--data"))
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:30:28: note: Field 'exists' is 0
+        else if (!f->label.exists && is_flag(argv[i], "-l", "--label"))
+                           ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:30:18: note: Left side of '&&' is true
+        else if (!f->label.exists && is_flag(argv[i], "-l", "--label"))
+                 ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:30:14: note: Taking true branch
+        else if (!f->label.exists && is_flag(argv[i], "-l", "--label"))
+             ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:59:13: note: 'flag' is non-null
+        if (flag)
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:59:9: note: Taking true branch
+        if (flag)
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:62:13: note: The value 1 is assigned to 'f.label.exists', which participates in a condition later
+            flag->exists = 1;
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:63:17: note: Assuming the condition is true
+            if ((i + 1) >= argc)
+                ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:63:13: note: Taking true branch
+            if ((i + 1) >= argc)
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:64:17: note:  Execution continues on line 25
+                continue;
+                ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:25:5: note: Loop condition is false. Execution continues on line 25
+    for (int i = 1; i < argc; i++)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->help.exists', which participates in a condition later
+}
+^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->version.exists', which participates in a condition later
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->key.exists', which participates in a condition later
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->key_file.exists', which participates in a condition later
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->input.exists', which participates in a condition later
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->delete_label.exists', which participates in a condition later
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->data.exists', which participates in a condition later
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->generate_password.exists', which participates in a condition later
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->b64enc.exists', which participates in a condition later
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->b64dec.exists', which participates in a condition later
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->label.value'
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:85:5: note: Returning from 'parse_flags'
+    parse_flags(&f, argc, argv);
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:87:16: note: Field 'exists' is 0
+    if (f.help.exists)
+               ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:87:5: note: Taking false branch
+    if (f.help.exists)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:118:19: note: Field 'exists' is 0
+    if (f.version.exists)
+                  ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:118:5: note: Taking false branch
+    if (f.version.exists)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:131:15: note: Field 'exists' is 0
+    if (f.key.exists)
+              ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:131:5: note: Taking false branch
+    if (f.key.exists)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:143:20: note: Field 'exists' is 0
+    if (f.key_file.exists)
+                   ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:143:5: note: Taking false branch
+    if (f.key_file.exists)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:155:16: note: Field 'value' is null
+    if (f.copy.value && !f.label.value)
+               ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:155:22: note: Left side of '&&' is false
+    if (f.copy.value && !f.label.value)
+                     ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:161:17: note: Field 'exists' is 0
+    if (f.input.exists)
+                ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:161:5: note: Taking false branch
+    if (f.input.exists)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:178:24: note: Field 'exists' is 0
+    if (f.delete_label.exists)
+                       ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:178:5: note: Taking false branch
+    if (f.delete_label.exists)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:192:17: note: Field 'exists' is 0
+    if (!f.data.exists)
+                ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:192:5: note: Taking true branch
+    if (!f.data.exists)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:194:25: note: Field 'exists' is 1
+        if (f.data_file.exists)
+                        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:194:9: note: Taking true branch
+        if (f.data_file.exists)
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:197:37: note: Field 'exists' is 0
+            if (f.generate_password.exists)
+                                    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:197:13: note: Taking false branch
+            if (f.generate_password.exists)
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:204:30: note: Field 'value' is non-null
+            if (!f.data_file.value)
+                             ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:204:13: note: Taking false branch
+            if (!f.data_file.value)
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:212:17: note: Assuming field 'size' is not equal to 0
+            if (file.size == 0)
+                ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:212:13: note: Taking false branch
+            if (file.size == 0)
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:224:26: note: Assuming field 'data' is not equal to null
+            ASSERT_ALLOC(s.data);
+                         ^
+../password-manager/include/console/util.h:43:13: note: expanded from macro 'ASSERT_ALLOC'
+        if (ptr == 0)                                                \
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:224:13: note: Taking false branch
+            ASSERT_ALLOC(s.data);
+            ^
+../password-manager/include/console/util.h:43:9: note: expanded from macro 'ASSERT_ALLOC'
+        if (ptr == 0)                                                \
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:224:13: note: Loop condition is false.  Exiting loop
+            ASSERT_ALLOC(s.data);
+            ^
+../password-manager/include/console/util.h:41:5: note: expanded from macro 'ASSERT_ALLOC'
+    do                                                               \
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:227:26: note: Field 'exists' is 0
+            if (f.b64enc.exists)
+                         ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:227:13: note: Taking false branch
+            if (f.b64enc.exists)
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:233:26: note: Field 'exists' is 0
+            if (f.b64dec.exists)
+                         ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:233:13: note: Taking false branch
+            if (f.b64dec.exists)
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:239:25: note: Field 'exists' is 1
+            if (f.label.exists)
+                        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:239:13: note: Taking true branch
+            if (f.label.exists)
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:240:44: note: Null pointer passed to 1st parameter expecting 'nonnull'
+                encrypt_and_replace(&f, s, PM_STR(f.label.value), aes_key);
+                                           ^
+../password-manager/include/console/util.h:17:48: note: expanded from macro 'PM_STR'
+    (String) { .data = (uint8_t *)s, .length = strlen(s) }
+                                               ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:288:51: warning: Null pointer passed to 1st parameter expecting 'nonnull' [clang-analyzer-core.NonNullParamChecker]
+                encrypt_and_replace(&f, password, PM_STR(f.label.value), aes_key);
+                                                  ^
+../password-manager/include/console/util.h:17:48: note: expanded from macro 'PM_STR'
+    (String) { .data = (uint8_t *)s, .length = strlen(s) }
+                                               ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:81:9: note: Assuming field 'data' is equal to null
+    if (sync_remote_url.data != 0)
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:81:5: note: Taking false branch
+    if (sync_remote_url.data != 0)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:84:5: note: 'f.label.value' initialized to a null pointer value
+    Flags f = {0};
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:85:5: note: Calling 'parse_flags'
+    parse_flags(&f, argc, argv);
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:25:21: note: Assuming 'i' is < 'argc'
+    for (int i = 1; i < argc; i++)
+                    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:25:5: note: Loop condition is true.  Entering loop body
+    for (int i = 1; i < argc; i++)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:28:22: note: Field 'exists' is 0
+        if (!f->data.exists && is_flag(argv[i], "-d", "--data"))
+                     ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:28:13: note: Left side of '&&' is true
+        if (!f->data.exists && is_flag(argv[i], "-d", "--data"))
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:28:9: note: Taking false branch
+        if (!f->data.exists && is_flag(argv[i], "-d", "--data"))
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:30:28: note: Field 'exists' is 0
+        else if (!f->label.exists && is_flag(argv[i], "-l", "--label"))
+                           ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:30:18: note: Left side of '&&' is true
+        else if (!f->label.exists && is_flag(argv[i], "-l", "--label"))
+                 ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:30:14: note: Taking false branch
+        else if (!f->label.exists && is_flag(argv[i], "-l", "--label"))
+             ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:32:27: note: Field 'exists' is 0
+        else if (!f->help.exists && is_flag(argv[i], "-h", "--help"))
+                          ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:32:18: note: Left side of '&&' is true
+        else if (!f->help.exists && is_flag(argv[i], "-h", "--help"))
+                 ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:32:14: note: Taking false branch
+        else if (!f->help.exists && is_flag(argv[i], "-h", "--help"))
+             ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:34:32: note: Field 'exists' is 0
+        else if (!f->data_file.exists && is_flag(argv[i], "-df", "--data-file"))
+                               ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:34:18: note: Left side of '&&' is true
+        else if (!f->data_file.exists && is_flag(argv[i], "-df", "--data-file"))
+                 ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:34:14: note: Taking false branch
+        else if (!f->data_file.exists && is_flag(argv[i], "-df", "--data-file"))
+             ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:36:40: note: Field 'exists' is 0
+        else if (!f->generate_password.exists && is_flag(argv[i], "-gp", "--generate-password"))
+                                       ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:36:18: note: Left side of '&&' is true
+        else if (!f->generate_password.exists && is_flag(argv[i], "-gp", "--generate-password"))
+                 ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:36:14: note: Taking true branch
+        else if (!f->generate_password.exists && is_flag(argv[i], "-gp", "--generate-password"))
+             ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:59:13: note: 'flag' is non-null
+        if (flag)
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:59:9: note: Taking true branch
+        if (flag)
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:62:13: note: The value 1 is assigned to 'f.generate_password.exists', which participates in a condition later
+            flag->exists = 1;
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:63:17: note: Assuming the condition is false
+            if ((i + 1) >= argc)
+                ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:63:13: note: Taking false branch
+            if ((i + 1) >= argc)
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:65:13: note: Value assigned to 'f.generate_password.value', which participates in a condition later
+            flag->value = argv[i + 1];
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:25:21: note: 'i' is < 'argc'
+    for (int i = 1; i < argc; i++)
+                    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:25:5: note: Loop condition is true.  Entering loop body
+    for (int i = 1; i < argc; i++)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:28:22: note: Field 'exists' is 0
+        if (!f->data.exists && is_flag(argv[i], "-d", "--data"))
+                     ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:28:13: note: Left side of '&&' is true
+        if (!f->data.exists && is_flag(argv[i], "-d", "--data"))
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:28:9: note: Taking false branch
+        if (!f->data.exists && is_flag(argv[i], "-d", "--data"))
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:30:28: note: Field 'exists' is 0
+        else if (!f->label.exists && is_flag(argv[i], "-l", "--label"))
+                           ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:30:18: note: Left side of '&&' is true
+        else if (!f->label.exists && is_flag(argv[i], "-l", "--label"))
+                 ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:30:14: note: Taking true branch
+        else if (!f->label.exists && is_flag(argv[i], "-l", "--label"))
+             ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:59:13: note: 'flag' is non-null
+        if (flag)
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:59:9: note: Taking true branch
+        if (flag)
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:62:13: note: The value 1 is assigned to 'f.label.exists', which participates in a condition later
+            flag->exists = 1;
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:63:17: note: Assuming the condition is true
+            if ((i + 1) >= argc)
+                ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:63:13: note: Taking true branch
+            if ((i + 1) >= argc)
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:64:17: note:  Execution continues on line 25
+                continue;
+                ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:25:5: note: Loop condition is false. Execution continues on line 25
+    for (int i = 1; i < argc; i++)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->help.exists', which participates in a condition later
+}
+^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->version.exists', which participates in a condition later
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->key.exists', which participates in a condition later
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->key_file.exists', which participates in a condition later
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->input.exists', which participates in a condition later
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->delete_label.exists', which participates in a condition later
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->data.exists', which participates in a condition later
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->data_file.exists', which participates in a condition later
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->b64enc.exists', which participates in a condition later
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->b64dec.exists', which participates in a condition later
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:73:1: note: Returning without writing to 'f->label.value'
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:85:5: note: Returning from 'parse_flags'
+    parse_flags(&f, argc, argv);
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:87:16: note: Field 'exists' is 0
+    if (f.help.exists)
+               ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:87:5: note: Taking false branch
+    if (f.help.exists)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:118:19: note: Field 'exists' is 0
+    if (f.version.exists)
+                  ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:118:5: note: Taking false branch
+    if (f.version.exists)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:131:15: note: Field 'exists' is 0
+    if (f.key.exists)
+              ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:131:5: note: Taking false branch
+    if (f.key.exists)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:143:20: note: Field 'exists' is 0
+    if (f.key_file.exists)
+                   ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:143:5: note: Taking false branch
+    if (f.key_file.exists)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:155:16: note: Field 'value' is null
+    if (f.copy.value && !f.label.value)
+               ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:155:22: note: Left side of '&&' is false
+    if (f.copy.value && !f.label.value)
+                     ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:161:17: note: Field 'exists' is 0
+    if (f.input.exists)
+                ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:161:5: note: Taking false branch
+    if (f.input.exists)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:178:24: note: Field 'exists' is 0
+    if (f.delete_label.exists)
+                       ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:178:5: note: Taking false branch
+    if (f.delete_label.exists)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:192:17: note: Field 'exists' is 0
+    if (!f.data.exists)
+                ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:192:5: note: Taking true branch
+    if (!f.data.exists)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:194:25: note: Field 'exists' is 0
+        if (f.data_file.exists)
+                        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:194:9: note: Taking false branch
+        if (f.data_file.exists)
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:248:22: note: Field 'exists' is 0
+        if (f.b64enc.exists && f.b64enc.value)
+                     ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:248:29: note: Left side of '&&' is false
+        if (f.b64enc.exists && f.b64enc.value)
+                            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:254:22: note: Field 'exists' is 0
+        if (f.b64dec.exists && f.b64dec.value)
+                     ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:254:29: note: Left side of '&&' is false
+        if (f.b64dec.exists && f.b64dec.value)
+                            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:260:33: note: Field 'exists' is 1
+        if (f.generate_password.exists)
+                                ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:260:9: note: Taking true branch
+        if (f.generate_password.exists)
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:263:37: note: Field 'value' is non-null
+            if (f.generate_password.value)
+                                    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:263:13: note: Taking true branch
+            if (f.generate_password.value)
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:266:21: note: Assuming 'password_length' is not equal to 0
+                if (password_length == 0)
+                    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:266:17: note: Taking false branch
+                if (password_length == 0)
+                ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:270:28: note: Assuming 'password_length' is <= INT_MAX
+                else if (!(password_length <= INT_MAX))
+                           ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:270:22: note: Taking false branch
+                else if (!(password_length <= INT_MAX))
+                     ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:287:25: note: Field 'exists' is 1
+            if (f.label.exists)
+                        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:287:13: note: Taking true branch
+            if (f.label.exists)
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_parse.c:288:51: note: Null pointer passed to 1st parameter expecting 'nonnull'
+                encrypt_and_replace(&f, password, PM_STR(f.label.value), aes_key);
+                                                  ^
+../password-manager/include/console/util.h:17:48: note: expanded from macro 'PM_STR'
+    (String) { .data = (uint8_t *)s, .length = strlen(s) }
+                                               ^
+
+Analiziram fajl: ../password-manager/source/console/pm_rand.c
+
+Analiziram fajl: ../password-manager/source/console/pm_sync.c
+3 warnings generated.
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_sync.c:32:5: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+    memcpy(result.elems, cstrs.elems, cstrs.count * sizeof(result.elems[0]));
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_sync.c:32:5: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_sync.c:150:13: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+            memcpy(result + len, sep, sep_len);
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_sync.c:150:13: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_sync.c:155:9: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+        memcpy(result + len, cstrs.elems[i], elem_len);
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_sync.c:155:9: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+
+Analiziram fajl: ../password-manager/source/console/pm_thread.c
+
+Analiziram fajl: ../password-manager/source/console/pm_xcrypt.c
+17 warnings generated.
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:72:13: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+            memcpy(label_and_data, b64_decoded_str, label_len + 1);
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:72:13: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:73:13: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+            memcpy(label_and_data + label_len + 1, s.data, s.length);
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:73:13: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:79:17: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+                memcpy(f.start + line_start, b64_encoded_str, b64_encoded_len);
+                ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:79:17: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:91:21: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+                    memcpy(f.start + line_end + 1 + b64_len_diff, f.start + line_end + 1, initial_size - line_end - 1);
+                    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:91:21: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:92:21: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+                    memcpy(f.start + line_start, b64_encoded_str, b64_encoded_len);
+                    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:92:21: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:99:21: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+                    memcpy(f.start + line_start, b64_encoded_str, b64_encoded_len);
+                    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:99:21: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:101:21: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+                    memcpy(f.start + line_start + b64_encoded_len + 1, f.start + line_end + 1, initial_size - line_end - 1);
+                    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:101:21: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:124:5: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+    memcpy(label_and_data, label.data, label.length);
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:124:5: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:126:5: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+    memcpy(label_and_data + label.length + 1, s.data, s.length);
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:126:5: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:135:5: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+    memcpy(f.start + initial_size, b64_encoded_str, b64_encoded_len);
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:135:5: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:158:9: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+        memcpy(tl_copy, &tl, sizeof(thread_load_info));
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:158:9: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:166:9: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+        memcpy(tl_copy, &tl, sizeof(thread_load_info));
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:166:9: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:180:5: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+    memcpy(ctx->file.start + tl->offset, data_start, tl->load);
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:180:5: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:225:9: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+        memcpy(f.start + initial_size, b64_encoded_str, b64_encoded_len);
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:225:9: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:268:13: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+            memcpy(f.start + line_start, f.start + line_end + 1, f.size - line_end - 1);
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:268:13: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:339:9: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+        memcpy(file_copy, f.start, f.size);
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:339:9: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:404:5: warning: 1st function call argument is an uninitialized value [clang-analyzer-core.CallAndMessage]
+    free(glob.items);
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:297:9: note: Assuming field 'exists' is 0
+    if (fl->output.exists)
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:297:5: note: Taking false branch
+    if (fl->output.exists)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:321:9: note: Assuming field 'size' is not equal to 0
+    if (f.size == 0)
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:321:5: note: Taking false branch
+    if (f.size == 0)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:330:9: note: Assuming the condition is false
+        MAP_FILE_(&f);
+        ^
+../password-manager/include/console/io.h:60:13: note: expanded from macro 'MAP_FILE_'
+        if (!map_file(file_ptr)) \
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:330:9: note: Taking false branch
+        MAP_FILE_(&f);
+        ^
+../password-manager/include/console/io.h:60:9: note: expanded from macro 'MAP_FILE_'
+        if (!map_file(file_ptr)) \
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:330:9: note: Loop condition is false.  Exiting loop
+        MAP_FILE_(&f);
+        ^
+../password-manager/include/console/io.h:58:5: note: expanded from macro 'MAP_FILE_'
+    do                           \
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:335:9: note: Assuming field 'exists' is not equal to 0
+    if (fl->binary.exists)
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:335:5: note: Taking true branch
+    if (fl->binary.exists)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:338:22: note: Assuming 'file_copy' is not equal to null
+        ASSERT_ALLOC(file_copy);
+                     ^
+../password-manager/include/console/util.h:43:13: note: expanded from macro 'ASSERT_ALLOC'
+        if (ptr == 0)                                                \
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:338:9: note: Taking false branch
+        ASSERT_ALLOC(file_copy);
+        ^
+../password-manager/include/console/util.h:43:9: note: expanded from macro 'ASSERT_ALLOC'
+        if (ptr == 0)                                                \
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:338:9: note: Loop condition is false.  Exiting loop
+        ASSERT_ALLOC(file_copy);
+        ^
+../password-manager/include/console/util.h:41:5: note: expanded from macro 'ASSERT_ALLOC'
+    do                                                               \
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:347:13: note: Assuming the condition is false
+        if (fwrite(file_copy, 1, f.size, o) != f.size)
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:347:9: note: Taking false branch
+        if (fwrite(file_copy, 1, f.size, o) != f.size)
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:350:9: note: Control jumps to line 399
+        goto end;
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:399:9: note: Assuming field 'exists' is 0
+    if (fl->label.exists && !found_label)
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:399:26: note: Left side of '&&' is false
+    if (fl->label.exists && !found_label)
+                         ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:401:9: note: Assuming field 'exists' is 0
+    if (fl->output.exists)
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:401:5: note: Taking false branch
+    if (fl->output.exists)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:403:5: note: Assuming the condition is false
+    UNMAP_AND_CLOSE_FILE(f);
+    ^
+../password-manager/include/console/io.h:39:13: note: expanded from macro 'UNMAP_AND_CLOSE_FILE'
+        if (!unmap_and_close_file(file)) \
+            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:403:5: note: Taking false branch
+    UNMAP_AND_CLOSE_FILE(f);
+    ^
+../password-manager/include/console/io.h:39:9: note: expanded from macro 'UNMAP_AND_CLOSE_FILE'
+        if (!unmap_and_close_file(file)) \
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:403:5: note: Loop condition is false.  Exiting loop
+    UNMAP_AND_CLOSE_FILE(f);
+    ^
+../password-manager/include/console/io.h:37:5: note: expanded from macro 'UNMAP_AND_CLOSE_FILE'
+    do                                   \
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/pm_xcrypt.c:404:5: note: 1st function call argument is an uninitialized value
+    free(glob.items);
+    ^
+
+Analiziram fajl: ../password-manager/source/console/test.c
+17 warnings generated.
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:182:35: warning: Result of 'realloc' is converted to a pointer of type 'char *', which is incompatible with sizeof operand type 'char **' [clang-analyzer-unix.MallocSizeof]
+            char **tmp = (char **)realloc(lines, lmax * 2 * sizeof *lines);
+                                  ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:182:35: note: Result of 'realloc' is converted to a pointer of type 'char *', which is incompatible with sizeof operand type 'char **'
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:325:46: warning: passing 'char *' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [clang-diagnostic-pointer-sign]
+    unsigned char *decoded_data = b64_decode(lines[0], strlen(lines[0]), &decsize);
+                                             ^
+../password-manager/include/console/b64.h:25:40: note: passing argument to parameter here
+    uint8_t *b64_decode(const uint8_t *, size_t, size_t *);
+                                       ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:325:56: warning: Null pointer passed to 1st parameter expecting 'nonnull' [clang-analyzer-core.NonNullParamChecker]
+    unsigned char *decoded_data = b64_decode(lines[0], strlen(lines[0]), &decsize);
+                                                       ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:827:5: note: Loop condition is true.  Entering loop body
+    for (size_t i = 0; i < tests_count; i++)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:827:5: note: Loop condition is true.  Entering loop body
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:827:5: note: Loop condition is true.  Entering loop body
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:827:5: note: Loop condition is true.  Entering loop body
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:830:9: note: Calling 'run_test'
+        run_test(&tests[i]);
+        ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:639:5: note: Calling 'test_data_flag_valid'
+    t->f(t);
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:318:12: note: Assuming the condition is true
+    assert(run(t->a.key, t->a.argc, t->a.argv) == 0);
+           ^
+/usr/include/assert.h:109:11: note: expanded from macro 'assert'
+      if (expr)                                                         \
+          ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:318:5: note: Taking true branch
+    assert(run(t->a.key, t->a.argc, t->a.argv) == 0);
+    ^
+/usr/include/assert.h:109:7: note: expanded from macro 'assert'
+      if (expr)                                                         \
+      ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:322:5: note: Calling 'read_file'
+    read_file(DEFAULT_DATA_STORE, &lines, &nch);
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:164:11: note: Assuming 'f' is non-null
+    if (!(f = fopen(fp, "rb")))
+          ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:164:5: note: Taking false branch
+    if (!(f = fopen(fp, "rb")))
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:167:29: note: Storing null pointer value
+    if (!(*lines = (char **)calloc(255, sizeof(**lines))))
+                            ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:167:11: note: Assuming  is non-null
+    if (!(*lines = (char **)calloc(255, sizeof(**lines))))
+          ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:167:5: note: Taking false branch
+    if (!(*lines = (char **)calloc(255, sizeof(**lines))))
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:173:12: note: Assuming the condition is false
+    while ((nchr = getline(&ln, &n, f)) != -1)
+           ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:173:5: note: Loop condition is false. Execution continues on line 190
+    while ((nchr = getline(&ln, &n, f)) != -1)
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:322:5: note: Returning from 'read_file'
+    read_file(DEFAULT_DATA_STORE, &lines, &nch);
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:325:56: note: Null pointer passed to 1st parameter expecting 'nonnull'
+    unsigned char *decoded_data = b64_decode(lines[0], strlen(lines[0]), &decsize);
+                                                       ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:364:46: warning: passing 'char *' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [clang-diagnostic-pointer-sign]
+    unsigned char *decoded_data = b64_decode(data, nch, &decsize);
+                                             ^
+../password-manager/include/console/b64.h:25:40: note: passing argument to parameter here
+    uint8_t *b64_decode(const uint8_t *, size_t, size_t *);
+                                       ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:388:46: warning: passing 'char *' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [clang-diagnostic-pointer-sign]
+    unsigned char *decoded_data = b64_decode(data, nch, &decsize);
+                                             ^
+../password-manager/include/console/b64.h:25:40: note: passing argument to parameter here
+    uint8_t *b64_decode(const uint8_t *, size_t, size_t *);
+                                       ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:416:46: warning: passing 'char *' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [clang-diagnostic-pointer-sign]
+    unsigned char *decoded_data = b64_decode(data, nch, &decsize);
+                                             ^
+../password-manager/include/console/b64.h:25:40: note: passing argument to parameter here
+    uint8_t *b64_decode(const uint8_t *, size_t, size_t *);
+                                       ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:433:46: warning: passing 'char *' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [clang-diagnostic-pointer-sign]
+    unsigned char *decoded_data = b64_decode(data, nch, &decsize);
+                                             ^
+../password-manager/include/console/b64.h:25:40: note: passing argument to parameter here
+    uint8_t *b64_decode(const uint8_t *, size_t, size_t *);
+                                       ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:450:46: warning: passing 'char *' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [clang-diagnostic-pointer-sign]
+    unsigned char *decoded_data = b64_decode(data, nch, &decsize);
+                                             ^
+../password-manager/include/console/b64.h:25:40: note: passing argument to parameter here
+    uint8_t *b64_decode(const uint8_t *, size_t, size_t *);
+                                       ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:467:46: warning: passing 'char *' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [clang-diagnostic-pointer-sign]
+    unsigned char *decoded_data = b64_decode(data, nch, &decsize);
+                                             ^
+../password-manager/include/console/b64.h:25:40: note: passing argument to parameter here
+    uint8_t *b64_decode(const uint8_t *, size_t, size_t *);
+                                       ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:489:16: warning: passing 'char *' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [clang-diagnostic-pointer-sign]
+    b64_decode(data, nch, &decsize);
+               ^
+../password-manager/include/console/b64.h:25:40: note: passing argument to parameter here
+    uint8_t *b64_decode(const uint8_t *, size_t, size_t *);
+                                       ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:504:46: warning: passing 'char *' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [clang-diagnostic-pointer-sign]
+    unsigned char *decoded_data = b64_decode(data, nch, &decsize);
+                                             ^
+../password-manager/include/console/b64.h:25:40: note: passing argument to parameter here
+    uint8_t *b64_decode(const uint8_t *, size_t, size_t *);
+                                       ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:526:46: warning: passing 'char *' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [clang-diagnostic-pointer-sign]
+    unsigned char *decoded_data = b64_decode(data, nch, &decsize);
+                                             ^
+../password-manager/include/console/b64.h:25:40: note: passing argument to parameter here
+    uint8_t *b64_decode(const uint8_t *, size_t, size_t *);
+                                       ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:543:46: warning: passing 'char *' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [clang-diagnostic-pointer-sign]
+    unsigned char *decoded_data = b64_decode(data, nch, &decsize);
+                                             ^
+../password-manager/include/console/b64.h:25:40: note: passing argument to parameter here
+    uint8_t *b64_decode(const uint8_t *, size_t, size_t *);
+                                       ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:576:46: warning: passing 'char *' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [clang-diagnostic-pointer-sign]
+    unsigned char *decoded_data = b64_decode(data, nch, &decsize);
+                                             ^
+../password-manager/include/console/b64.h:25:40: note: passing argument to parameter here
+    uint8_t *b64_decode(const uint8_t *, size_t, size_t *);
+                                       ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:600:46: warning: passing 'char *' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [clang-diagnostic-pointer-sign]
+    unsigned char *decoded_data = b64_decode(data, nch, &decsize);
+                                             ^
+../password-manager/include/console/b64.h:25:40: note: passing argument to parameter here
+    uint8_t *b64_decode(const uint8_t *, size_t, size_t *);
+                                       ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:628:46: warning: passing 'char *' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [clang-diagnostic-pointer-sign]
+    unsigned char *decoded_data = b64_decode(data, nch, &decsize);
+                                             ^
+../password-manager/include/console/b64.h:25:40: note: passing argument to parameter here
+    uint8_t *b64_decode(const uint8_t *, size_t, size_t *);
+                                       ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:825:5: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+    memcpy(key, AES_KEY, sizeof(AES_KEY));
+    ^
+/home/emilija/Desktop/2023_Analysis_password-manager/clang-tidy/../password-manager/source/console/test.c:825:5: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+
