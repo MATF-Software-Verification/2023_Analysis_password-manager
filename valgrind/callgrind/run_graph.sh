@@ -6,7 +6,7 @@ then
     exit 1
 fi
 
-callgrind_files=("callgrind_output/callgrind_base64_encode_string.out" "callgrind_output/callgrind_copy_saved_password.out" "callgrind_output/callgrind_generate_and_copy_password.out" "callgrind_output/callgrind_print_all_passwords.out" "callgrind_output/callgrind_search_passwords.out")
+callgrind_files=("callgrind_output/callgrind_gui.out" "callgrind_output/callgrind_copy_saved_password.out" "callgrind_output/callgrind_generate_and_copy_password.out" "callgrind_output/callgrind_print_all_passwords.out" "callgrind_output/callgrind_search_passwords.out")
 
 mkdir -p graphs
 

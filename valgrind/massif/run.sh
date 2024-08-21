@@ -2,9 +2,9 @@
 
 set -xe
 
-pm_exec="../../../password-manager-master/pm"
+pm_exec="../../../password-manager/pm"
 massif_output_dir="massif_outputs"
-key_file="../../password-manager-master/key.txt"
+key_file="../../password-manager/key.txt"
 
 if [ ! -d "$massif_output_dir" ]; then
     mkdir "$massif_output_dir"

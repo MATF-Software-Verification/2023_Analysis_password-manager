@@ -1,9 +1,9 @@
 #!/bin/bash
 
-PM_PATH="../../password-manager-master/pm"
-KEY_FILE="../../password-manager-master/key.txt"
+PM_PATH="../../password-manager/pm"
+KEY_FILE="../../password-manager/key.txt"
 RESULTS_DIR="callgrind_output"
-PM_UI_PATH ="../../password-manager-master/source/ui/pm-ui"
+PM_UI_PATH ="../../password-manager/source/ui/pm-ui"
 
 
 mkdir -p $RESULTS_DIR

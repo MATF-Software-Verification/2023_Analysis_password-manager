@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SOURCE_DIR="../password-manager-master/source"
+SOURCE_DIR="../password-manager/source"
 
 
 echo "checking console..."
