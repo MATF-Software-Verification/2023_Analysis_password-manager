@@ -1,4 +1,4 @@
 [submodule "password-manager"]
     path = password-manager
-    url = <https://github.com/Ciremun/password-manager
+    url = https://github.com/Ciremun/password-manager
 

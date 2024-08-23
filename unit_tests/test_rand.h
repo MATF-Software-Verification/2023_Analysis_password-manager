@@ -2,7 +2,7 @@
 #define TEST_RAND_H
 
 #include "CuTest.h"
-#include "../password-manager-master/include/console/rand.h"
+#include "../password-manager/include/console/rand.h"
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>

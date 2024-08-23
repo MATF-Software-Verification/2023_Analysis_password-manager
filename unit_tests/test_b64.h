@@ -2,7 +2,7 @@
 #define TEST_B64_H
 
 #include "CuTest.h"
-#include "../password-manager-master/include/console/b64.h"
+#include "../password-manager/include/console/b64.h"
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
