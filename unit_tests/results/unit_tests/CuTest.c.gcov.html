@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2024-08-17 12:15:13</td>
+            <td class="headerValue">2024-08-24 14:40:50</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">21</td>
@@ -76,18 +76,18 @@
 <a name="14"><span class="lineNum">      14 </span>            :  * CuStr</a>
 <a name="15"><span class="lineNum">      15 </span>            :  *-------------------------------------------------------------------------*/</a>
 <a name="16"><span class="lineNum">      16 </span>            : </a>
-<a name="17"><span class="lineNum">      17 </span><span class="lineCov">          6 : char* CuStrAlloc(size_t size)</span></a>
+<a name="17"><span class="lineNum">      17 </span><span class="lineCov">         10 : char* CuStrAlloc(size_t size)</span></a>
 <a name="18"><span class="lineNum">      18 </span>            : {</a>
-<a name="19"><span class="lineNum">      19 </span><span class="lineCov">          6 :         char* newStr = (char*) malloc( sizeof(char) * (size) );</span></a>
-<a name="20"><span class="lineNum">      20 </span><span class="lineCov">          6 :         return newStr;</span></a>
+<a name="19"><span class="lineNum">      19 </span><span class="lineCov">         10 :         char* newStr = (char*) malloc( sizeof(char) * (size) );</span></a>
+<a name="20"><span class="lineNum">      20 </span><span class="lineCov">         10 :         return newStr;</span></a>
 <a name="21"><span class="lineNum">      21 </span>            : }</a>
 <a name="22"><span class="lineNum">      22 </span>            : </a>
-<a name="23"><span class="lineNum">      23 </span><span class="lineCov">          6 : char* CuStrCopy(const char* old)</span></a>
+<a name="23"><span class="lineNum">      23 </span><span class="lineCov">         10 : char* CuStrCopy(const char* old)</span></a>
 <a name="24"><span class="lineNum">      24 </span>            : {</a>
-<a name="25"><span class="lineNum">      25 </span><span class="lineCov">          6 :         size_t len = strlen(old);</span></a>
-<a name="26"><span class="lineNum">      26 </span><span class="lineCov">          6 :         char* newStr = CuStrAlloc(len + 1);</span></a>
-<a name="27"><span class="lineNum">      27 </span><span class="lineCov">          6 :         strcpy(newStr, old);</span></a>
-<a name="28"><span class="lineNum">      28 </span><span class="lineCov">          6 :         return newStr;</span></a>
+<a name="25"><span class="lineNum">      25 </span><span class="lineCov">         10 :         size_t len = strlen(old);</span></a>
+<a name="26"><span class="lineNum">      26 </span><span class="lineCov">         10 :         char* newStr = CuStrAlloc(len + 1);</span></a>
+<a name="27"><span class="lineNum">      27 </span><span class="lineCov">         10 :         strcpy(newStr, old);</span></a>
+<a name="28"><span class="lineNum">      28 </span><span class="lineCov">         10 :         return newStr;</span></a>
 <a name="29"><span class="lineNum">      29 </span>            : }</a>
 <a name="30"><span class="lineNum">      30 </span>            : </a>
 <a name="31"><span class="lineNum">      31 </span>            : /*-------------------------------------------------------------------------*</a>
@@ -112,9 +112,9 @@
 <a name="50"><span class="lineNum">      50 </span><span class="lineCov">          1 :         return str;</span></a>
 <a name="51"><span class="lineNum">      51 </span>            : }</a>
 <a name="52"><span class="lineNum">      52 </span>            : </a>
-<a name="53"><span class="lineNum">      53 </span><span class="lineCov">          7 : void CuStringDelete(CuString *str)</span></a>
+<a name="53"><span class="lineNum">      53 </span><span class="lineCov">         11 : void CuStringDelete(CuString *str)</span></a>
 <a name="54"><span class="lineNum">      54 </span>            : {</a>
-<a name="55"><span class="lineNum">      55 </span><span class="lineCov">          7 :         if (!str) return;</span></a>
+<a name="55"><span class="lineNum">      55 </span><span class="lineCov">         11 :         if (!str) return;</span></a>
 <a name="56"><span class="lineNum">      56 </span><span class="lineCov">          1 :         free(str-&gt;buffer);</span></a>
 <a name="57"><span class="lineNum">      57 </span><span class="lineCov">          1 :         free(str);</span></a>
 <a name="58"><span class="lineNum">      58 </span>            : }</a>
@@ -125,20 +125,20 @@
 <a name="63"><span class="lineNum">      63 </span><span class="lineNoCov">          0 :         str-&gt;size = newSize;</span></a>
 <a name="64"><span class="lineNum">      64 </span><span class="lineNoCov">          0 : }</span></a>
 <a name="65"><span class="lineNum">      65 </span>            : </a>
-<a name="66"><span class="lineNum">      66 </span><span class="lineCov">          8 : void CuStringAppend(CuString* str, const char* text)</span></a>
+<a name="66"><span class="lineNum">      66 </span><span class="lineCov">         12 : void CuStringAppend(CuString* str, const char* text)</span></a>
 <a name="67"><span class="lineNum">      67 </span>            : {</a>
 <a name="68"><span class="lineNum">      68 </span>            :         size_t length;</a>
 <a name="69"><span class="lineNum">      69 </span>            : </a>
-<a name="70"><span class="lineNum">      70 </span><span class="lineCov">          8 :         if (text == NULL) {</span></a>
+<a name="70"><span class="lineNum">      70 </span><span class="lineCov">         12 :         if (text == NULL) {</span></a>
 <a name="71"><span class="lineNum">      71 </span><span class="lineNoCov">          0 :                 text = &quot;NULL&quot;;</span></a>
 <a name="72"><span class="lineNum">      72 </span>            :         }</a>
 <a name="73"><span class="lineNum">      73 </span>            : </a>
-<a name="74"><span class="lineNum">      74 </span><span class="lineCov">          8 :         length = strlen(text);</span></a>
-<a name="75"><span class="lineNum">      75 </span><span class="lineCov">          8 :         if (str-&gt;length + length + 1 &gt;= str-&gt;size)</span></a>
+<a name="74"><span class="lineNum">      74 </span><span class="lineCov">         12 :         length = strlen(text);</span></a>
+<a name="75"><span class="lineNum">      75 </span><span class="lineCov">         12 :         if (str-&gt;length + length + 1 &gt;= str-&gt;size)</span></a>
 <a name="76"><span class="lineNum">      76 </span><span class="lineNoCov">          0 :                 CuStringResize(str, str-&gt;length + length + 1 + STRING_INC);</span></a>
-<a name="77"><span class="lineNum">      77 </span><span class="lineCov">          8 :         str-&gt;length += length;</span></a>
-<a name="78"><span class="lineNum">      78 </span><span class="lineCov">          8 :         strcat(str-&gt;buffer, text);</span></a>
-<a name="79"><span class="lineNum">      79 </span><span class="lineCov">          8 : }</span></a>
+<a name="77"><span class="lineNum">      77 </span><span class="lineCov">         12 :         str-&gt;length += length;</span></a>
+<a name="78"><span class="lineNum">      78 </span><span class="lineCov">         12 :         strcat(str-&gt;buffer, text);</span></a>
+<a name="79"><span class="lineNum">      79 </span><span class="lineCov">         12 : }</span></a>
 <a name="80"><span class="lineNum">      80 </span>            : </a>
 <a name="81"><span class="lineNum">      81 </span><span class="lineNoCov">          0 : void CuStringAppendChar(CuString* str, char ch)</span></a>
 <a name="82"><span class="lineNum">      82 </span>            : {</a>
@@ -174,42 +174,42 @@
 <a name="112"><span class="lineNum">     112 </span>            :  * CuTest</a>
 <a name="113"><span class="lineNum">     113 </span>            :  *-------------------------------------------------------------------------*/</a>
 <a name="114"><span class="lineNum">     114 </span>            : </a>
-<a name="115"><span class="lineNum">     115 </span><span class="lineCov">          6 : void CuTestInit(CuTest* t, const char* name, TestFunction function)</span></a>
+<a name="115"><span class="lineNum">     115 </span><span class="lineCov">         10 : void CuTestInit(CuTest* t, const char* name, TestFunction function)</span></a>
 <a name="116"><span class="lineNum">     116 </span>            : {</a>
-<a name="117"><span class="lineNum">     117 </span><span class="lineCov">          6 :         t-&gt;name = CuStrCopy(name);</span></a>
-<a name="118"><span class="lineNum">     118 </span><span class="lineCov">          6 :         t-&gt;failed = 0;</span></a>
-<a name="119"><span class="lineNum">     119 </span><span class="lineCov">          6 :         t-&gt;ran = 0;</span></a>
-<a name="120"><span class="lineNum">     120 </span><span class="lineCov">          6 :         t-&gt;message = NULL;</span></a>
-<a name="121"><span class="lineNum">     121 </span><span class="lineCov">          6 :         t-&gt;function = function;</span></a>
-<a name="122"><span class="lineNum">     122 </span><span class="lineCov">          6 :         t-&gt;jumpBuf = NULL;</span></a>
-<a name="123"><span class="lineNum">     123 </span><span class="lineCov">          6 : }</span></a>
+<a name="117"><span class="lineNum">     117 </span><span class="lineCov">         10 :         t-&gt;name = CuStrCopy(name);</span></a>
+<a name="118"><span class="lineNum">     118 </span><span class="lineCov">         10 :         t-&gt;failed = 0;</span></a>
+<a name="119"><span class="lineNum">     119 </span><span class="lineCov">         10 :         t-&gt;ran = 0;</span></a>
+<a name="120"><span class="lineNum">     120 </span><span class="lineCov">         10 :         t-&gt;message = NULL;</span></a>
+<a name="121"><span class="lineNum">     121 </span><span class="lineCov">         10 :         t-&gt;function = function;</span></a>
+<a name="122"><span class="lineNum">     122 </span><span class="lineCov">         10 :         t-&gt;jumpBuf = NULL;</span></a>
+<a name="123"><span class="lineNum">     123 </span><span class="lineCov">         10 : }</span></a>
 <a name="124"><span class="lineNum">     124 </span>            : </a>
-<a name="125"><span class="lineNum">     125 </span><span class="lineCov">          6 : CuTest* CuTestNew(const char* name, TestFunction function)</span></a>
+<a name="125"><span class="lineNum">     125 </span><span class="lineCov">         10 : CuTest* CuTestNew(const char* name, TestFunction function)</span></a>
 <a name="126"><span class="lineNum">     126 </span>            : {</a>
-<a name="127"><span class="lineNum">     127 </span><span class="lineCov">          6 :         CuTest* tc = CU_ALLOC(CuTest);</span></a>
-<a name="128"><span class="lineNum">     128 </span><span class="lineCov">          6 :         CuTestInit(tc, name, function);</span></a>
-<a name="129"><span class="lineNum">     129 </span><span class="lineCov">          6 :         return tc;</span></a>
+<a name="127"><span class="lineNum">     127 </span><span class="lineCov">         10 :         CuTest* tc = CU_ALLOC(CuTest);</span></a>
+<a name="128"><span class="lineNum">     128 </span><span class="lineCov">         10 :         CuTestInit(tc, name, function);</span></a>
+<a name="129"><span class="lineNum">     129 </span><span class="lineCov">         10 :         return tc;</span></a>
 <a name="130"><span class="lineNum">     130 </span>            : }</a>
 <a name="131"><span class="lineNum">     131 </span>            : </a>
-<a name="132"><span class="lineNum">     132 </span><span class="lineCov">          6 : void CuTestDelete(CuTest *t)</span></a>
+<a name="132"><span class="lineNum">     132 </span><span class="lineCov">         10 : void CuTestDelete(CuTest *t)</span></a>
 <a name="133"><span class="lineNum">     133 </span>            : {</a>
-<a name="134"><span class="lineNum">     134 </span><span class="lineCov">          6 :         if (!t) return;</span></a>
-<a name="135"><span class="lineNum">     135 </span><span class="lineCov">          6 :         CuStringDelete(t-&gt;message);</span></a>
-<a name="136"><span class="lineNum">     136 </span><span class="lineCov">          6 :         free(t-&gt;name);</span></a>
-<a name="137"><span class="lineNum">     137 </span><span class="lineCov">          6 :         free(t);</span></a>
+<a name="134"><span class="lineNum">     134 </span><span class="lineCov">         10 :         if (!t) return;</span></a>
+<a name="135"><span class="lineNum">     135 </span><span class="lineCov">         10 :         CuStringDelete(t-&gt;message);</span></a>
+<a name="136"><span class="lineNum">     136 </span><span class="lineCov">         10 :         free(t-&gt;name);</span></a>
+<a name="137"><span class="lineNum">     137 </span><span class="lineCov">         10 :         free(t);</span></a>
 <a name="138"><span class="lineNum">     138 </span>            : }</a>
 <a name="139"><span class="lineNum">     139 </span>            : </a>
-<a name="140"><span class="lineNum">     140 </span><span class="lineCov">          6 : void CuTestRun(CuTest* tc)</span></a>
+<a name="140"><span class="lineNum">     140 </span><span class="lineCov">         10 : void CuTestRun(CuTest* tc)</span></a>
 <a name="141"><span class="lineNum">     141 </span>            : {</a>
 <a name="142"><span class="lineNum">     142 </span>            :         jmp_buf buf;</a>
-<a name="143"><span class="lineNum">     143 </span><span class="lineCov">          6 :         tc-&gt;jumpBuf = &amp;buf;</span></a>
-<a name="144"><span class="lineNum">     144 </span><span class="lineCov">          6 :         if (setjmp(buf) == 0)</span></a>
+<a name="143"><span class="lineNum">     143 </span><span class="lineCov">         10 :         tc-&gt;jumpBuf = &amp;buf;</span></a>
+<a name="144"><span class="lineNum">     144 </span><span class="lineCov">         10 :         if (setjmp(buf) == 0)</span></a>
 <a name="145"><span class="lineNum">     145 </span>            :         {</a>
-<a name="146"><span class="lineNum">     146 </span><span class="lineCov">          6 :                 tc-&gt;ran = 1;</span></a>
-<a name="147"><span class="lineNum">     147 </span><span class="lineCov">          6 :                 (tc-&gt;function)(tc);</span></a>
+<a name="146"><span class="lineNum">     146 </span><span class="lineCov">         10 :                 tc-&gt;ran = 1;</span></a>
+<a name="147"><span class="lineNum">     147 </span><span class="lineCov">         10 :                 (tc-&gt;function)(tc);</span></a>
 <a name="148"><span class="lineNum">     148 </span>            :         }</a>
-<a name="149"><span class="lineNum">     149 </span><span class="lineCov">          6 :         tc-&gt;jumpBuf = 0;</span></a>
-<a name="150"><span class="lineNum">     150 </span><span class="lineCov">          6 : }</span></a>
+<a name="149"><span class="lineNum">     149 </span><span class="lineCov">         10 :         tc-&gt;jumpBuf = 0;</span></a>
+<a name="150"><span class="lineNum">     150 </span><span class="lineCov">         10 : }</span></a>
 <a name="151"><span class="lineNum">     151 </span>            : </a>
 <a name="152"><span class="lineNum">     152 </span><span class="lineNoCov">          0 : static void CuFailInternal(CuTest* tc, const char* file, int line, CuString* string)</span></a>
 <a name="153"><span class="lineNum">     153 </span>            : {</a>
@@ -239,21 +239,21 @@
 <a name="177"><span class="lineNum">     177 </span><span class="lineNoCov">          0 :         CuFailInternal(tc, file, line, &amp;string);</span></a>
 <a name="178"><span class="lineNum">     178 </span><span class="lineNoCov">          0 : }</span></a>
 <a name="179"><span class="lineNum">     179 </span>            : </a>
-<a name="180"><span class="lineNum">     180 </span><span class="lineCov">       1011 : void CuAssert_Line(CuTest* tc, const char* file, int line, const char* message, int condition)</span></a>
+<a name="180"><span class="lineNum">     180 </span><span class="lineCov">       1014 : void CuAssert_Line(CuTest* tc, const char* file, int line, const char* message, int condition)</span></a>
 <a name="181"><span class="lineNum">     181 </span>            : {</a>
-<a name="182"><span class="lineNum">     182 </span><span class="lineCov">       1011 :         if (condition) return;</span></a>
+<a name="182"><span class="lineNum">     182 </span><span class="lineCov">       1014 :         if (condition) return;</span></a>
 <a name="183"><span class="lineNum">     183 </span><span class="lineNoCov">          0 :         CuFail_Line(tc, file, line, NULL, message);</span></a>
 <a name="184"><span class="lineNum">     184 </span>            : }</a>
 <a name="185"><span class="lineNum">     185 </span>            : </a>
-<a name="186"><span class="lineNum">     186 </span><span class="lineCov">          2 : void CuAssertStrEquals_LineMsg(CuTest* tc, const char* file, int line, const char* message, </span></a>
+<a name="186"><span class="lineNum">     186 </span><span class="lineCov">          3 : void CuAssertStrEquals_LineMsg(CuTest* tc, const char* file, int line, const char* message, </span></a>
 <a name="187"><span class="lineNum">     187 </span>            :         const char* expected, const char* actual)</a>
 <a name="188"><span class="lineNum">     188 </span>            : {</a>
 <a name="189"><span class="lineNum">     189 </span>            :         CuString string;</a>
-<a name="190"><span class="lineNum">     190 </span><span class="lineCov">          2 :         if ((expected == NULL &amp;&amp; actual == NULL) ||</span></a>
-<a name="191"><span class="lineNum">     191 </span><span class="lineCov">          2 :             (expected != NULL &amp;&amp; actual != NULL &amp;&amp;</span></a>
-<a name="192"><span class="lineNum">     192 </span><span class="lineCov">          2 :              strcmp(expected, actual) == 0))</span></a>
+<a name="190"><span class="lineNum">     190 </span><span class="lineCov">          3 :         if ((expected == NULL &amp;&amp; actual == NULL) ||</span></a>
+<a name="191"><span class="lineNum">     191 </span><span class="lineCov">          3 :             (expected != NULL &amp;&amp; actual != NULL &amp;&amp;</span></a>
+<a name="192"><span class="lineNum">     192 </span><span class="lineCov">          3 :              strcmp(expected, actual) == 0))</span></a>
 <a name="193"><span class="lineNum">     193 </span>            :         {</a>
-<a name="194"><span class="lineNum">     194 </span><span class="lineCov">          2 :                 return;</span></a>
+<a name="194"><span class="lineNum">     194 </span><span class="lineCov">          3 :                 return;</span></a>
 <a name="195"><span class="lineNum">     195 </span>            :         }</a>
 <a name="196"><span class="lineNum">     196 </span>            : </a>
 <a name="197"><span class="lineNum">     197 </span><span class="lineNoCov">          0 :         CuStringInit(&amp;string);</span></a>
@@ -270,11 +270,11 @@
 <a name="208"><span class="lineNum">     208 </span><span class="lineNoCov">          0 :         CuFailInternal(tc, file, line, &amp;string);</span></a>
 <a name="209"><span class="lineNum">     209 </span>            : }</a>
 <a name="210"><span class="lineNum">     210 </span>            : </a>
-<a name="211"><span class="lineNum">     211 </span><span class="lineCov">          1 : void CuAssertIntEquals_LineMsg(CuTest* tc, const char* file, int line, const char* message, </span></a>
+<a name="211"><span class="lineNum">     211 </span><span class="lineCov">          2 : void CuAssertIntEquals_LineMsg(CuTest* tc, const char* file, int line, const char* message, </span></a>
 <a name="212"><span class="lineNum">     212 </span>            :         int expected, int actual)</a>
 <a name="213"><span class="lineNum">     213 </span>            : {</a>
 <a name="214"><span class="lineNum">     214 </span>            :         char buf[STRING_MAX];</a>
-<a name="215"><span class="lineNum">     215 </span><span class="lineCov">          1 :         if (expected == actual) return;</span></a>
+<a name="215"><span class="lineNum">     215 </span><span class="lineCov">          2 :         if (expected == actual) return;</span></a>
 <a name="216"><span class="lineNum">     216 </span><span class="lineNoCov">          0 :         sprintf(buf, &quot;expected &lt;%d&gt; but was &lt;%d&gt;&quot;, expected, actual);</span></a>
 <a name="217"><span class="lineNum">     217 </span><span class="lineNoCov">          0 :         CuFail_Line(tc, file, line, message, buf);</span></a>
 <a name="218"><span class="lineNum">     218 </span>            : }</a>
@@ -303,18 +303,18 @@
 <a name="241"><span class="lineNum">     241 </span>            :  * CuSuite</a>
 <a name="242"><span class="lineNum">     242 </span>            :  *-------------------------------------------------------------------------*/</a>
 <a name="243"><span class="lineNum">     243 </span>            : </a>
-<a name="244"><span class="lineNum">     244 </span><span class="lineCov">          3 : void CuSuiteInit(CuSuite* testSuite)</span></a>
+<a name="244"><span class="lineNum">     244 </span><span class="lineCov">          4 : void CuSuiteInit(CuSuite* testSuite)</span></a>
 <a name="245"><span class="lineNum">     245 </span>            : {</a>
-<a name="246"><span class="lineNum">     246 </span><span class="lineCov">          3 :         testSuite-&gt;count = 0;</span></a>
-<a name="247"><span class="lineNum">     247 </span><span class="lineCov">          3 :         testSuite-&gt;failCount = 0;</span></a>
-<a name="248"><span class="lineNum">     248 </span><span class="lineCov">          3 :         memset(testSuite-&gt;list, 0, sizeof(testSuite-&gt;list));</span></a>
-<a name="249"><span class="lineNum">     249 </span><span class="lineCov">          3 : }</span></a>
+<a name="246"><span class="lineNum">     246 </span><span class="lineCov">          4 :         testSuite-&gt;count = 0;</span></a>
+<a name="247"><span class="lineNum">     247 </span><span class="lineCov">          4 :         testSuite-&gt;failCount = 0;</span></a>
+<a name="248"><span class="lineNum">     248 </span><span class="lineCov">          4 :         memset(testSuite-&gt;list, 0, sizeof(testSuite-&gt;list));</span></a>
+<a name="249"><span class="lineNum">     249 </span><span class="lineCov">          4 : }</span></a>
 <a name="250"><span class="lineNum">     250 </span>            : </a>
-<a name="251"><span class="lineNum">     251 </span><span class="lineCov">          3 : CuSuite* CuSuiteNew(void)</span></a>
+<a name="251"><span class="lineNum">     251 </span><span class="lineCov">          4 : CuSuite* CuSuiteNew(void)</span></a>
 <a name="252"><span class="lineNum">     252 </span>            : {</a>
-<a name="253"><span class="lineNum">     253 </span><span class="lineCov">          3 :         CuSuite* testSuite = CU_ALLOC(CuSuite);</span></a>
-<a name="254"><span class="lineNum">     254 </span><span class="lineCov">          3 :         CuSuiteInit(testSuite);</span></a>
-<a name="255"><span class="lineNum">     255 </span><span class="lineCov">          3 :         return testSuite;</span></a>
+<a name="253"><span class="lineNum">     253 </span><span class="lineCov">          4 :         CuSuite* testSuite = CU_ALLOC(CuSuite);</span></a>
+<a name="254"><span class="lineNum">     254 </span><span class="lineCov">          4 :         CuSuiteInit(testSuite);</span></a>
+<a name="255"><span class="lineNum">     255 </span><span class="lineCov">          4 :         return testSuite;</span></a>
 <a name="256"><span class="lineNum">     256 </span>            : }</a>
 <a name="257"><span class="lineNum">     257 </span>            : </a>
 <a name="258"><span class="lineNum">     258 </span><span class="lineCov">          1 : void CuSuiteDelete(CuSuite *testSuite)</span></a>
@@ -324,48 +324,48 @@
 <a name="262"><span class="lineNum">     262 </span>            :         {</a>
 <a name="263"><span class="lineNum">     263 </span><span class="lineCov">       1024 :                 if (testSuite-&gt;list[n])</span></a>
 <a name="264"><span class="lineNum">     264 </span>            :                 {</a>
-<a name="265"><span class="lineNum">     265 </span><span class="lineCov">          6 :                         CuTestDelete(testSuite-&gt;list[n]);</span></a>
+<a name="265"><span class="lineNum">     265 </span><span class="lineCov">         10 :                         CuTestDelete(testSuite-&gt;list[n]);</span></a>
 <a name="266"><span class="lineNum">     266 </span>            :                 }</a>
 <a name="267"><span class="lineNum">     267 </span>            :         }</a>
 <a name="268"><span class="lineNum">     268 </span><span class="lineCov">          1 :         free(testSuite);</span></a>
 <a name="269"><span class="lineNum">     269 </span>            : </a>
 <a name="270"><span class="lineNum">     270 </span><span class="lineCov">          1 : }</span></a>
 <a name="271"><span class="lineNum">     271 </span>            : </a>
-<a name="272"><span class="lineNum">     272 </span><span class="lineCov">         12 : void CuSuiteAdd(CuSuite* testSuite, CuTest *testCase)</span></a>
+<a name="272"><span class="lineNum">     272 </span><span class="lineCov">         20 : void CuSuiteAdd(CuSuite* testSuite, CuTest *testCase)</span></a>
 <a name="273"><span class="lineNum">     273 </span>            : {</a>
-<a name="274"><span class="lineNum">     274 </span><span class="lineCov">         12 :         assert(testSuite-&gt;count &lt; MAX_TEST_CASES);</span></a>
-<a name="275"><span class="lineNum">     275 </span><span class="lineCov">         12 :         testSuite-&gt;list[testSuite-&gt;count] = testCase;</span></a>
-<a name="276"><span class="lineNum">     276 </span><span class="lineCov">         12 :         testSuite-&gt;count++;</span></a>
-<a name="277"><span class="lineNum">     277 </span><span class="lineCov">         12 : }</span></a>
+<a name="274"><span class="lineNum">     274 </span><span class="lineCov">         20 :         assert(testSuite-&gt;count &lt; MAX_TEST_CASES);</span></a>
+<a name="275"><span class="lineNum">     275 </span><span class="lineCov">         20 :         testSuite-&gt;list[testSuite-&gt;count] = testCase;</span></a>
+<a name="276"><span class="lineNum">     276 </span><span class="lineCov">         20 :         testSuite-&gt;count++;</span></a>
+<a name="277"><span class="lineNum">     277 </span><span class="lineCov">         20 : }</span></a>
 <a name="278"><span class="lineNum">     278 </span>            : </a>
-<a name="279"><span class="lineNum">     279 </span><span class="lineCov">          2 : void CuSuiteAddSuite(CuSuite* testSuite, CuSuite* testSuite2)</span></a>
+<a name="279"><span class="lineNum">     279 </span><span class="lineCov">          3 : void CuSuiteAddSuite(CuSuite* testSuite, CuSuite* testSuite2)</span></a>
 <a name="280"><span class="lineNum">     280 </span>            : {</a>
 <a name="281"><span class="lineNum">     281 </span>            :         int i;</a>
-<a name="282"><span class="lineNum">     282 </span><span class="lineCov">          8 :         for (i = 0 ; i &lt; testSuite2-&gt;count ; ++i)</span></a>
+<a name="282"><span class="lineNum">     282 </span><span class="lineCov">         13 :         for (i = 0 ; i &lt; testSuite2-&gt;count ; ++i)</span></a>
 <a name="283"><span class="lineNum">     283 </span>            :         {</a>
-<a name="284"><span class="lineNum">     284 </span><span class="lineCov">          6 :                 CuTest* testCase = testSuite2-&gt;list[i];</span></a>
-<a name="285"><span class="lineNum">     285 </span><span class="lineCov">          6 :                 CuSuiteAdd(testSuite, testCase);</span></a>
+<a name="284"><span class="lineNum">     284 </span><span class="lineCov">         10 :                 CuTest* testCase = testSuite2-&gt;list[i];</span></a>
+<a name="285"><span class="lineNum">     285 </span><span class="lineCov">         10 :                 CuSuiteAdd(testSuite, testCase);</span></a>
 <a name="286"><span class="lineNum">     286 </span>            :         }</a>
-<a name="287"><span class="lineNum">     287 </span><span class="lineCov">          2 : }</span></a>
+<a name="287"><span class="lineNum">     287 </span><span class="lineCov">          3 : }</span></a>
 <a name="288"><span class="lineNum">     288 </span>            : </a>
 <a name="289"><span class="lineNum">     289 </span><span class="lineCov">          1 : void CuSuiteRun(CuSuite* testSuite)</span></a>
 <a name="290"><span class="lineNum">     290 </span>            : {</a>
 <a name="291"><span class="lineNum">     291 </span>            :         int i;</a>
-<a name="292"><span class="lineNum">     292 </span><span class="lineCov">          7 :         for (i = 0 ; i &lt; testSuite-&gt;count ; ++i)</span></a>
+<a name="292"><span class="lineNum">     292 </span><span class="lineCov">         11 :         for (i = 0 ; i &lt; testSuite-&gt;count ; ++i)</span></a>
 <a name="293"><span class="lineNum">     293 </span>            :         {</a>
-<a name="294"><span class="lineNum">     294 </span><span class="lineCov">          6 :                 CuTest* testCase = testSuite-&gt;list[i];</span></a>
-<a name="295"><span class="lineNum">     295 </span><span class="lineCov">          6 :                 CuTestRun(testCase);</span></a>
-<a name="296"><span class="lineNum">     296 </span><span class="lineCov">          6 :                 if (testCase-&gt;failed) { testSuite-&gt;failCount += 1; }</span></a>
+<a name="294"><span class="lineNum">     294 </span><span class="lineCov">         10 :                 CuTest* testCase = testSuite-&gt;list[i];</span></a>
+<a name="295"><span class="lineNum">     295 </span><span class="lineCov">         10 :                 CuTestRun(testCase);</span></a>
+<a name="296"><span class="lineNum">     296 </span><span class="lineCov">         10 :                 if (testCase-&gt;failed) { testSuite-&gt;failCount += 1; }</span></a>
 <a name="297"><span class="lineNum">     297 </span>            :         }</a>
 <a name="298"><span class="lineNum">     298 </span><span class="lineCov">          1 : }</span></a>
 <a name="299"><span class="lineNum">     299 </span>            : </a>
 <a name="300"><span class="lineNum">     300 </span><span class="lineCov">          1 : void CuSuiteSummary(CuSuite* testSuite, CuString* summary)</span></a>
 <a name="301"><span class="lineNum">     301 </span>            : {</a>
 <a name="302"><span class="lineNum">     302 </span>            :         int i;</a>
-<a name="303"><span class="lineNum">     303 </span><span class="lineCov">          7 :         for (i = 0 ; i &lt; testSuite-&gt;count ; ++i)</span></a>
+<a name="303"><span class="lineNum">     303 </span><span class="lineCov">         11 :         for (i = 0 ; i &lt; testSuite-&gt;count ; ++i)</span></a>
 <a name="304"><span class="lineNum">     304 </span>            :         {</a>
-<a name="305"><span class="lineNum">     305 </span><span class="lineCov">          6 :                 CuTest* testCase = testSuite-&gt;list[i];</span></a>
-<a name="306"><span class="lineNum">     306 </span><span class="lineCov">          6 :                 CuStringAppend(summary, testCase-&gt;failed ? &quot;F&quot; : &quot;.&quot;);</span></a>
+<a name="305"><span class="lineNum">     305 </span><span class="lineCov">         10 :                 CuTest* testCase = testSuite-&gt;list[i];</span></a>
+<a name="306"><span class="lineNum">     306 </span><span class="lineCov">         10 :                 CuStringAppend(summary, testCase-&gt;failed ? &quot;F&quot; : &quot;.&quot;);</span></a>
 <a name="307"><span class="lineNum">     307 </span>            :         }</a>
 <a name="308"><span class="lineNum">     308 </span><span class="lineCov">          1 :         CuStringAppend(summary, &quot;\n\n&quot;);</span></a>
 <a name="309"><span class="lineNum">     309 </span><span class="lineCov">          1 : }</span></a>

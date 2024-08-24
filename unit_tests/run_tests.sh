@@ -5,7 +5,7 @@ RESULTS_DIR="results"
 
 set -xe
 
-gcc -o test_runner test_runner.c test_b64.c test_rand.c ../password-manager/source/console/pm_b64.c  ../password-manager/source/console/pm_rand.c  CuTest.c -I../password-manager/include -I../password-manager/include/console --coverage -o test_runner
+gcc -o test_runner test_runner.c test_b64.c test_rand.c test_glob.c ../password-manager/source/console/pm_b64.c  ../password-manager/source/console/pm_rand.c ../password-manager/source/console/pm_glob.c CuTest.c -I../password-manager/include -I../password-manager/include/console --coverage -o test_runner
 
 
 ./test_runner
